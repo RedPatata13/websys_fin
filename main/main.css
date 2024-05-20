@@ -94,7 +94,7 @@ p { font-family: "Inter", sans-serif; }
     bottom: 0px;
     display: flex;
     align-items: center;
-    background-image: url(images/headerImg.jpg);
+    background-image: url(../images/headerImg.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     justify-content: center;
@@ -209,7 +209,7 @@ p { font-family: "Inter", sans-serif; }
 }
 
 .barBelow {
-	padding: 3vw;
+	padding: 2.5vw;
 	margin-top: -2px;
 	text-align: center;
     background-color: #16141D;
@@ -222,11 +222,13 @@ p { font-family: "Inter", sans-serif; }
 
 .barBelow h8 {
  	color: #FFC806;
+ 	font-size: 1.5vw;
 }
 
 .barBelow p {
  	color: white;
-    margin-top: 0.8vw; 	
+    margin-top: 0.4vw; 	
+    font-size: 1.05vw;
 }
 
 .daily {
@@ -246,7 +248,7 @@ p { font-family: "Inter", sans-serif; }
     height: 65%;
 	margin-left: 50px;
     border-radius: 15px;
-    background-image: url(images/adobo.jpg);
+    background-image: url(../images/adobo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -325,6 +327,15 @@ p { font-family: "Inter", sans-serif; }
     font-style: normal;
     font-size: 1.8vw;
     margin: 4px 0;
+}
+
+.dailyBlackDesc a {
+	text-decoration: none;
+	color: black;
+}
+
+.dailyBlackDesc:hover a {
+	color: white;
 }
 
 .categHeaderTxt h1 {
@@ -416,7 +427,7 @@ p { font-family: "Inter", sans-serif; }
     left: 0px;*/
     width: 100%;
 	height: 100%;
-	background-image: url("images/meat.jpg");
+	background-image: url("../images/meat.jpg");
 	background-size: contain;
 	opacity: .25;
 	border-radius: 10px;
@@ -437,7 +448,7 @@ p { font-family: "Inter", sans-serif; }
     left: 0px;*/
     width: 100%;
 	height: 100%;
-	background-image: url("images/vegs.jpg");
+	background-image: url("../images/vegs.jpg");
 	background-size: contain;
 	opacity: .25;
 	border-radius: 10px;
@@ -458,7 +469,7 @@ p { font-family: "Inter", sans-serif; }
     left: 0px;*/
     width: 100%;
 	height: 100%;
-	background-image: url("images/eggs.png");
+	background-image: url("../images/eggs.png");
 	background-size: contain;
 	opacity: .25;
 	border-radius: 10px;
@@ -480,7 +491,7 @@ p { font-family: "Inter", sans-serif; }
     left: 0px;*/
     width: 100%;
 	height: 100%;
-	background-image: url("images/pasta.png");
+	background-image: url("../images/pasta.png");
 	background-size: contain;
 	opacity: .25;
 	border-radius: 10px;
@@ -502,14 +513,14 @@ p { font-family: "Inter", sans-serif; }
     left: 0px;*/
     width: 100%;
 	height: 100%;
-	background-image: url("images/fish.png");
+	background-image: url("../images/fish.png");
 	background-size: contain;
 	opacity: .25;
 	border-radius: 10px;
 }
 
 .footer {
-	background-color: #D1462F;
+	background-color: #16141D;
 	position: absolute;
 	left: 0px;
 	right: 0px;
@@ -526,9 +537,9 @@ p { font-family: "Inter", sans-serif; }
     left: 0px;*/
     width: 100%;
 	height: 100%;
-	background-image: url("images/footer.png");
+	background-image: url("../images/footerInverted.png");
 	background-size: contain;
-	opacity: .25;
+	opacity: .12;
 }
 
 .footerContent {
