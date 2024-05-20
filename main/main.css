@@ -304,9 +304,6 @@ p { font-family: "Inter", sans-serif; }
     align-content: center;
 }
 
-.dailyTxtHeader {
-}
-
 .dailyTxtHeader h1 {
     font-family: "Aleo", serif;
     font-optical-sizing: auto;

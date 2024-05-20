@@ -1,0 +1,128 @@
+.recipeFood {
+	display: flex;
+    align-items: center;
+    background-color: #FFC806;
+    width: 100%;
+    height: 33vw;
+    /* padding: 9vw; */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.recipeTxt {
+    display: flex;
+    width: 41.5%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.recipeFoodHeader h1 {
+    font-family: "Aleo", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4.3vw;
+    margin: 0px;
+    color: white;
+}
+
+.recipeDesc {
+    width: 86%;
+}
+
+.recipeDesc p {
+	width: 100%;
+    text-align: right;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.8vw;
+    margin: 4px 0;
+}
+
+.dailyBlackDesc a {
+	text-decoration: none;
+	color: black;
+}
+
+.dailyBlackDesc:hover a {
+	color: white;
+}
+
+.recipeImg {
+    display: flex;
+    width: 43vw;
+    height: 28vw;
+    margin-left: 42px;
+    margin-right: 5vw;
+    border-radius: 15px;
+    background-image: url(../images/adobo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    font-size: 0.1rem;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.recipeImg:before {
+    content: "";
+    position: absolute;
+    border-radius: 15px;
+    /*top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;*/
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,0.65) 100%); ;
+    z-index: 998;
+}
+
+.recipeContent {
+    display: flex;
+    padding: 2vw 4.5vw 4.5vw;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #FFC806;
+}
+
+.ingredients {
+    width: 40%;
+    background-color: white;
+    border-radius: 4vw 0 0 4vw;  
+}
+
+.ingredients h1 {
+    margin-left: 3.5vw;    
+}
+
+.ingredients ul {
+    margin-left: 3.5vw;  
+    margin-bottom: 4vw;
+}
+
+.directions {
+    width: 60%;
+    background-color: #16141D;
+    color: white;
+    border-radius: 0 4vw 4vw 0;    
+}
+
+.directions h1, .directions h2 {
+    color: #FFC806;
+    margin-left: 3.5vw;    
+}
+
+.directions ol {
+    margin-right: 4vw;
+    margin-left: 3.5vw;
+    margin-bottom: 4vw;
+}
+
+.directions li {
+    margin-bottom: 1vw;
+}
