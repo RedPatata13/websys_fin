@@ -67,8 +67,13 @@ p { font-family: "Inter", sans-serif; }
 }
 
 .otherNavTxts p{
+	cursor: pointer;
 	font-family: "Kurale", serif;
 	font-size: 1.6vw;
+}
+
+.otherNavTxts:hover p{
+	color: #FFC806;
 }
 
 .logo {
@@ -84,7 +89,7 @@ p { font-family: "Inter", sans-serif; }
 .introSection {
 	position: relative;
     width: 100%;
-    height: 56vw;
+    height: 55.75vw;
     bottom: 0px;
     display: flex;
     align-items: center;
@@ -178,10 +183,18 @@ p { font-family: "Inter", sans-serif; }
 	width: 33%;
 }
 
+.introBtn1:hover {
+	background-color: #595858;
+}
+
 .introBtn2 {
 	background-color: #FFC806;
 	margin-right: -14px;
 	width: 33%;
+}
+
+.introBtn2:hover {
+	background-color: #5f4b05;
 }
 
 .introImg {
@@ -547,6 +560,7 @@ p { font-family: "Inter", sans-serif; }
 
 .secondCol p {
 	padding-right: 30px;
+	font-size: 1.35vw;
 }
 .secondCol li, .secondCol img, .secondCol p {
 	filter: brightness(999);
