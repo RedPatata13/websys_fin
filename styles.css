@@ -37,7 +37,6 @@ p { font-family: "Inter", sans-serif; }
     top: 0px;
     right: 0px;
     width: 100%;
-    height: 100%;
 }
 
 /*this the ul*/
@@ -75,6 +74,8 @@ p { font-family: "Inter", sans-serif; }
 .otherNavTxts:hover p{
 	color: #FFC806;
 }
+
+
 
 .logo {
 	font-family: "Aleo", serif;
@@ -207,6 +208,27 @@ p { font-family: "Inter", sans-serif; }
 	width: 100%;
 }
 
+.barBelow {
+	padding: 3vw;
+	margin-top: -2px;
+	text-align: center;
+    background-color: #16141D;
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.barBelow h8 {
+ 	color: #FFC806;
+}
+
+.barBelow p {
+ 	color: white;
+    margin-top: 0.8vw; 	
+}
+
 .daily {
 	display: flex;
     align-items: center;
@@ -331,6 +353,11 @@ p { font-family: "Inter", sans-serif; }
 	justify-content: center;
 	flex-wrap: wrap;
 	align-content: flex-start;
+}
+
+.categLink {
+	text-decoration: none;
+	color: black;
 }
 
 .meatBtn, .vegsBtn, .eggBtn, .pastaBtn, .fishBtn {
