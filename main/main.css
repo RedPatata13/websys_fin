@@ -552,6 +552,93 @@ p { font-family: "Inter", sans-serif; }
 	border-radius: 10px;
 }
 
+.objectives {
+    display: flex;
+    background-color: #16141D;
+    padding: 4vw 0 4vw 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.obj1stCol {
+	width: 55%;
+}
+
+.objHeadHeader {
+	color: white;
+	margin-left: 2.8vw;
+	text-decoration: underline;
+	text-decoration-color: #FFC806;
+}
+
+.objContent {
+	display: flex;
+}
+
+.objContent img {
+	width: 1vw;
+}
+
+.tastyImg {
+	background-image: url("../images/tasty.png");
+}
+
+.objTxt {
+	color: white;
+	margin-left: 2vw;
+}
+
+.objTxt p {
+	font-size: 1.3vw;
+	margin-top: -1vw;
+}
+
+.objLine {
+	background-color: #FFC806;
+    margin-top: 1.3vw;
+    margin-bottom: 1.3vw;
+    margin-left: 3vw;
+    width: 54vw;
+    height: 0.1vw;
+}
+
+.cheapImg {
+	background-image: url("../images/cheap.jpeg");
+}
+
+.healthyImg {
+	background-image: url("../images/healthy.png");
+}
+
+.tastyImg, .cheapImg, .healthyImg {
+	width: 60vw;
+    height: 16vw;
+    margin-left: 50px;
+    border-radius: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    font-size: 0.1rem;
+}
+
+.obj2ndCol {
+	display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.objCircle {
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    height: 14vw;
+    width: 14vw;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    display: inline-block;
+}
+
 .footer {
 	background-color: #16141D;
 	position: absolute;
