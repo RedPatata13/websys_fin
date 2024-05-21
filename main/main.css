@@ -41,6 +41,7 @@ p { font-family: "Inter", sans-serif; }
 
 /*this the ul*/
 .navList {
+	height: 3.4vw;
 	display: flex;
     list-style-type: none;
     justify-content: flex-end;
@@ -567,6 +568,7 @@ p { font-family: "Inter", sans-serif; }
 .objHeadHeader {
 	color: white;
 	margin-left: 2.8vw;
+	font-size: 2.8vw;
 	text-decoration: underline;
 	text-decoration-color: #FFC806;
 }
@@ -586,6 +588,12 @@ p { font-family: "Inter", sans-serif; }
 .objTxt {
 	color: white;
 	margin-left: 2vw;
+}
+
+.objTxt h1 {
+	text-decoration: underline;
+	text-decoration-color: #FFC806;
+	font-size: 1.9vw;
 }
 
 .objTxt p {

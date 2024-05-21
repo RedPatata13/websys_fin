@@ -6,27 +6,12 @@ body {
 .foodPageIntro {
 	position: relative;
     width: 100%;
-    height: 27.5vw;
+    height: 5vw;
     bottom: 0px;
     display: flex;
     align-items: center;
-    background-color: #FF6F6F;
+    background-color: #16141D;
     justify-content: center;
-}
-
-.foodPageIntro:before {
-	content: "";
-    position: absolute;
-    /*top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;*/
-    width: 100%;
-	height: 100%;
-	background-image: url("../images/meat.jpg");
-	background-size: cover;
-	opacity: .25;
-	border-radius: 10px;
 }
 
 .foodPageIntro h1 {
@@ -38,54 +23,130 @@ body {
     font-weight: 900;
 }
 
-.searchBar {
-	width: 100%;
-	background-color: #FFC806;
-	position: sticky;
+.searchIntro {
+    width: 100%;
+    height: 33vw;
     display: flex;
-    justify-content: flex-end;
-    top: 0;
+}
+
+.searchIntroTxt {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 60%;
+    background-color: white;
+}
+
+.actualSearchIntroTxt {
+    width: 50%;
+    position: relative;
+    left: 5.1vw;
+    bottom: -14.5vw;
+}
+
+.actualSearchIntroTxt h1 {
+    text-decoration: underline;
+    text-decoration-color: #FFC806;
+    font-size: 3vw;
+
+}
+
+.actualSearchIntroTxt p {
+    margin-top: -1.6vw;
+    font-size: 1.3vw;
+}
+
+.searchIntroImg {
+    background-image: url(../images/headerImg.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 55%;
+}
+
+.searchContent {
+    background-color: #16141D;
+}
+
+.searchHead {
+    margin-top: -.08vw;
+    padding-top: 3vw;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: #FFC806;
+}
+
+.searchBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .searchBar input[type=text] {
-	margin: 0.5vw;
-	padding: 0.5vw;
-	border: none;
-	border-radius: 0.5vw 2vw 0vw 0.5vw;
+    margin: 0.5vw;
+    padding: 0.6vw;
+    width: 37vw;
+    height: 2vw;
+    border: none;
+    border-radius: 0.53vw;
+}
+
+.searchBtn {
+    margin: 0.5vw;
+    height: 2.2vw;
+    width: 5.2vw;
+    color: white;
+    font-size: 0.9vw;
+    background-color: #FFC806;
+    border: none;
+}
+
+.searchBtn:hover {
+    background-color: #735900;
 }
 
 .recipes {
-	display: flex;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-content: space-between;
-    justify-content: space-between;
-    margin: -3vw 7vw 7vw 7vw ;
+    align-content: center;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    padding-bottom: 8vw;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .recipeWidget {
-	display: flex;
+    display: flex;
     flex-direction: column;
-    width: 18vw;
-    margin-top: 6vw;
+    width: 14.4vw;
+    color: white;
+    padding: 1.35vw;
+    justify-content: space-evenly;
 }
 
 .recipeWidget img {
-	border-radius: 2.5vw;
+	border-radius: 0.5vw;
+    background-position: center;
 }
 
 .recipeWidget h2 {
-	margin-bottom: 1vw;
+    font-size: 2vw;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+	margin-bottom: 0.5vw;
+    text-decoration: underline;
+    text-decoration-color: #FFC806;
 }
 
 .recipeWidget p {
-	margin: 0;
+	margin-top: 0;
     text-overflow: ellipsis;
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
-
 }
 
 .recipeWidget a {
@@ -95,4 +156,13 @@ body {
 
 .recipeWidget:hover a {
     color: #FFC806;
+}
+
+.tags {
+    font-size: 1vw;
+    margin-bottom: 1vw;
+}
+
+.recipeTxtContent {
+    font-size: 1.3vw;
 }
