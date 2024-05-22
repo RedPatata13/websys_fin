@@ -75,3 +75,17 @@ class RecipeList{
         this.mass_add(recipes);
     }
 }
+
+class RecipeImporter{
+    constructor(){
+        this.list = [];
+    }
+    add(item){
+
+    }
+    get(){
+        return this.list;
+    }
+}
+
+export default [RecipeList, Recipe, RecipeImporter];

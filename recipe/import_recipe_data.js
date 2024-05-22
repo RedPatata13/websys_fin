@@ -1,3 +1,37 @@
+document.addEventListener('DOMContentLoaded', function(){
+    main();
+});
+
+function main(){
+    let title = document.title;
+    let recipe_name = document.getElementById('recipe-name');
+    let ingredients = document.getElementById('ingredients');
+    let directions = document.getElementById('directions');
+    let description = document.getElementById('description'); 
+    let img = document.getElementById('img');
+
+    let list = new RecipeList();
+    let recipe = list.get(title);
+
+    recipe_name.innerHTML = recipe.name;
+    description.innerHTML = recipe.description;
+
+    ingredients.innerHTML = '';
+    recipe.ingredients.forEach(ingredient => {
+        let listItem = document.createElement('li');
+        listItem.textContent = ingredient;
+        ingredients.appendChild(listItem);
+    });
+
+    directions.innerHTML = '';
+    recipe.directions.forEach(direction => {
+        let listItem = document.createElement('li');
+        listItem.textContent = direction;
+        directions.appendChild(listItem);
+    });
+    img.style.backgroundImage = `url(${recipe.img_file_path})`;
+}
+
 class Recipe{
     constructor(name, description, ingredients, directions, img_file_path){
         this.name = name;
@@ -75,3 +109,4 @@ class RecipeList{
         this.mass_add(recipes);
     }
 }
+
