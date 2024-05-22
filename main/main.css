@@ -41,12 +41,13 @@ p { font-family: "Inter", sans-serif; }
 
 /*this the ul*/
 .navList {
-	display: flex;
+    height: 3.4vw;
+    display: flex;
     list-style-type: none;
     justify-content: flex-end;
     align-items: center;
     padding: 1rem 0;
-    margin: 0;
+    margin: 2vw 4vw 0 4vw;
     z-index: 999;
 }
 
@@ -68,7 +69,7 @@ p { font-family: "Inter", sans-serif; }
 .otherNavTxts p{
 	cursor: pointer;
 	font-family: "Kurale", serif;
-	font-size: 1.6vw;
+	font-size: 0.9rem;
 }
 
 .otherNavTxts:hover p{
@@ -76,11 +77,16 @@ p { font-family: "Inter", sans-serif; }
 }
 
 
+.navLine {
+	width: 100%;
+	height: 0.05vw;
+	background-color: white;
+}
 
 .logo {
 	font-family: "Aleo", serif;
 	font-optical-sizing: auto;
-	font-size: 2vw;
+	font-size: 1.3rem;
 	font-weight: 600;
 	font-style: normal;
 	color: white;
@@ -88,16 +94,18 @@ p { font-family: "Inter", sans-serif; }
 }
 
 .introSection {
-	position: relative;
+    position: relative;
     width: 100%;
-    height: 55.75vw;
+    height: 41.95vw;
     bottom: 0px;
     display: flex;
     align-items: center;
     background-image: url(../images/headerImg.jpg);
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     justify-content: center;
+    z-index: 90;
 }
 
 .introSection:before {
@@ -115,9 +123,10 @@ p { font-family: "Inter", sans-serif; }
 
 .introTxt {
 	z-index: 999;
-	text-align: center;
-	display: flex;
   	width: 50%;
+	padding-top: 5vw;
+	display: flex;
+	text-align: center;
   	flex-direction: column;
   	flex-wrap: wrap;
   	align-content: center;
@@ -125,7 +134,7 @@ p { font-family: "Inter", sans-serif; }
 
 .introHeaderTxt h8 {
 	color: white;
-	font-size: 1.6vw;    
+	font-size: 1rem;
 }
 
 .headerEight {
@@ -133,11 +142,10 @@ p { font-family: "Inter", sans-serif; }
 }
 
 .introHeaderTxt h1{
-	z-index: 999;
 	position: relative;
 	font-family: "Playfair Display", serif;
   	font-optical-sizing: auto;
-	font-size: 4.7vw;
+	font-size: 2.2rem;
   	font-weight: 500;
   	font-style: normal;
   	color: white;
@@ -151,7 +159,7 @@ p { font-family: "Inter", sans-serif; }
 	font-family: "Kurale", serif;
 	color: white;
 	font-optical-sizing: auto;
-	font-size: 1.3vw;
+	font-size: 0.9rem;
 }
 
 .introBtns {
@@ -163,10 +171,10 @@ p { font-family: "Inter", sans-serif; }
 }
 
 .introBtns button{
-	    z-index: 999;
+	z-index: 999;
     position: relative;
     font-family: "Kurale", serif;
-    font-size: 1.5vw;
+    font-size: 0.9rem;
     border: none;
     border-radius: 6px;
     color: black;
@@ -222,13 +230,13 @@ p { font-family: "Inter", sans-serif; }
 
 .barBelow h8 {
  	color: #FFC806;
- 	font-size: 1.5vw;
+ 	font-size: 1rem;
 }
 
 .barBelow p {
  	color: white;
     margin-top: 0.4vw; 	
-    font-size: 1.05vw;
+    font-size: 0.825rem;
 }
 
 .daily {
@@ -236,7 +244,7 @@ p { font-family: "Inter", sans-serif; }
     align-items: center;
     background-color: #FFC806;
     width: 100%;
-    height: 50vw;
+    height: 35vw;
     /* padding: 9vw; */
     justify-content: center;
     flex-wrap: wrap;
@@ -244,7 +252,7 @@ p { font-family: "Inter", sans-serif; }
 
 .dailyImg {
     display: flex;
-    width: 43%;
+    width: 32%;
     height: 65%;
 	margin-left: 50px;
     border-radius: 15px;
@@ -276,7 +284,7 @@ p { font-family: "Inter", sans-serif; }
     position: relative;
     padding-right: 2vw;
     margin-bottom: 0vw;
-    font-size: 6vw;
+    font-size: 2.8rem;
     font-family: 'Aleo';
     color: white;
 }
@@ -298,13 +306,10 @@ p { font-family: "Inter", sans-serif; }
 
 .dailyTxt {
     display: flex;
-    width: 41.5%;
+    width: 38%;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-}
-
-.dailyTxtHeader {
 }
 
 .dailyTxtHeader h1 {
@@ -312,7 +317,7 @@ p { font-family: "Inter", sans-serif; }
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 900;
-    font-size: 4.3vw;
+    font-size: 2.4rem;
     margin: 0px;
 }
 
@@ -325,7 +330,7 @@ p { font-family: "Inter", sans-serif; }
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 1.8vw;
+    font-size: 0.95rem;
     margin: 4px 0;
 }
 
@@ -339,12 +344,13 @@ p { font-family: "Inter", sans-serif; }
 }
 
 .categHeaderTxt h1 {
-	font-size: 3.3vw;
+	color: white;
+    font-size: 2rem;
     font-weight: 900;
-    margin-top: 4vw;
     margin-right: auto;
     margin-bottom: 0px;
-    margin-left: 4vw;
+    margin-left: 7vw;
+    margin-top: 0;
 }
 
 .categHeaderTxt p {
@@ -519,6 +525,100 @@ p { font-family: "Inter", sans-serif; }
 	border-radius: 10px;
 }
 
+.objectives {
+    display: flex;
+    background-color: #16141D;
+    padding: 4vw 0 4vw 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.obj1stCol {
+	width: 55%;
+}
+
+.objHeadHeader {
+	color: white;
+	margin-left: 1.9rem;
+	font-size: 2.8vw;
+	text-decoration: underline;
+	text-decoration-color: #FFC806;
+}
+
+.objContent {
+	display: flex;
+}
+
+.objContent img {
+	width: 1vw;
+}
+
+.tastyImg {
+	background-image: url("../images/tasty.png");
+}
+
+.objTxt {
+	color: white;
+	margin-left: 2vw;
+}
+
+.objTxt h1 {
+	text-decoration: underline;
+	text-decoration-color: #FFC806;
+	font-size: 1.3rem;
+}
+
+.objTxt p {
+	font-size: 0.9rem;
+	margin-top: -1vw;
+}
+
+.objLine {
+	background-color: #FFC806;
+    margin-top: 1.3vw;
+    margin-bottom: 1.3vw;
+    margin-left: 3vw;
+    width: 54vw;
+    height: 0.1vw;
+}
+
+.cheapImg {
+	background-image: url("../images/cheap.jpeg");
+}
+
+.healthyImg {
+	background-image: url("../images/healthy.png");
+}
+
+.tastyImg, .cheapImg, .healthyImg {
+	width: 120vw;
+    height: 16vw;
+    margin-left: 50px;
+    border-radius: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    font-size: 0.1rem;
+}
+
+.obj2ndCol {
+	display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.objCircle {
+    margin-top: 0.5vw;
+    margin-bottom: 0.5vw;
+    height: 14vw;
+    width: 14vw;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    display: inline-block;
+}
+
 .footer {
 	background-color: #16141D;
 	position: absolute;
@@ -555,7 +655,7 @@ p { font-family: "Inter", sans-serif; }
 	position: relative;
 	font-family: "Aleo", serif;
 	font-weight: 900;
-	font-size: 4vw;
+	font-size: 1.7rem;
 	color: white;
 	margin-bottom: -10px;
 }
@@ -564,7 +664,7 @@ p { font-family: "Inter", sans-serif; }
     position: relative;
     font-family: "Kurale", serif;
     margin-top: 8px;
-    font-size: 0.9vw;
+    font-size: 0.8rem;
     letter-spacing: 3.8px;
     color: white;
 }
@@ -573,7 +673,7 @@ p { font-family: "Inter", sans-serif; }
     position: relative;
     list-style-type: none;
     color: white;
-    font-size: 0.9vw;
+    font-size: 0.6rem;
     font-family: "Inter", sans-serif;
     font-weight: 200;
     margin-top: -4px;
@@ -598,11 +698,11 @@ p { font-family: "Inter", sans-serif; }
 
 .secondCol p {
 	padding-right: 30px;
-	font-size: 1.35vw;
+	font-size: 1rem;
 }
 .secondCol li, .secondCol img, .secondCol p {
 	filter: brightness(999);
-    width: 2.8vw;
+    width: 1rem;
 	display: flex;
 	position: relative;
 	font-family: "Aleo", serif;
@@ -610,9 +710,9 @@ p { font-family: "Inter", sans-serif; }
 }
 
 .secondCol h2 {
-    font-size: 2.7vw;
+    font-size: 1rem;
     margin-top: 3vw;
- 	margin-bottom: 0.8vw;
+    margin-bottom: 0.3vw;
 }
 
 .footerBot {
@@ -620,7 +720,7 @@ p { font-family: "Inter", sans-serif; }
 }
 
 .footerLine {
-	width: 85%;
+	width: 90%;
 	height: 1.5px;
 	background-color: white;
 }

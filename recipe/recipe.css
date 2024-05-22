@@ -1,0 +1,161 @@
+body {
+    background-color: #16141D;
+}
+
+.recipeLayout {
+    display: flex;
+    justify-content: center;
+}
+
+.obj2ndCol {
+    background-color: #16141D;
+    width: 20%;
+    justify-content: flex-start;
+    padding-top: 6vw;
+}
+
+.contentRecipe {
+    width: 60%;
+}
+
+.recipeFood {
+    color: white;
+    display: flex;
+    background-color: #16141D;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipeTxt {
+    display: flex;
+    width: 41.5%;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.recipeFoodHeader h1 {
+    font-family: "Aleo", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 4.3vw;
+    margin: 0px;
+    margin-bottom: 2vw;
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: #FFC806;
+    margin-top: 4vw;
+}
+
+.recipeDesc {
+    width: 86%;
+}
+
+.recipeDesc p {
+    padding-top: 3vw;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.5vw;
+    margin: 4px 0;
+    font-weight: 400;
+}
+
+.dailyBlackDesc a {
+	text-decoration: none;
+	color: black;
+}
+
+.dailyBlackDesc:hover a {
+	color: white;
+}
+
+.recipeImg {
+    width: 49vw;
+    height: 28vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    background-image: url(../images/headerImg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.recipeContent {
+    display: flex;
+    padding: 2vw 4.5vw 4.5vw;
+    background-color: #16141D;
+}
+
+.ingredients {
+    width: 40%;
+    color: white;
+    background-color: #16141D;
+    border-right-color: #FFC806;
+}
+
+.ingredients h1 {
+    margin-left: 3.5vw;    
+    font-family: "Kurale", serif;
+}
+
+.ingredients ul {
+    margin-left: 3.5vw;  
+    margin-bottom: 4vw;
+}
+
+.ingredients li {
+    font-size: 1.3vw;
+}
+
+hr {
+    align-self: center;
+    height: 91vw;
+}
+
+.directions {
+    width: 60%;
+    background-color: #16141D;
+    color: white;
+}
+
+.directions h1 {
+    color: #FFC806;
+    margin-left: 3.5vw;    
+}
+
+.directions ol {
+    margin-right: 4vw;
+    margin-left: 3.5vw;
+    margin-bottom: 4vw;
+}
+
+.directions li {
+    margin-bottom: 1vw;
+    font-family: "Kurale", serif;
+    font-size: 1.3vw;
+    width: 115%;
+}
+
+.ingredients h1, .directions h1 {
+    color: white;
+    margin-top: 4vw;
+    text-decoration: underline;
+    text-decoration-color: #FFC806;
+    font-size: 3vw;
+
+}
+
+
+.moreStuff {
+    background-color: #16141D;
+}
