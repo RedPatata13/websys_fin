@@ -1,16 +1,21 @@
+body {
+    background-color: #16141D;
+}
+
 .recipeLayout {
     display: flex;
+    justify-content: center;
 }
 
 .obj2ndCol {
     background-color: #16141D;
-    width: 30%;
+    width: 20%;
     justify-content: flex-start;
     padding-top: 6vw;
 }
 
 .contentRecipe {
-    width: 70%;
+    width: 60%;
 }
 
 .recipeFood {
@@ -73,8 +78,8 @@
 }
 
 .recipeImg {
-    width: 62vw;
-    height: 44vw;
+    width: 49vw;
+    height: 28vw;
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
@@ -138,6 +143,7 @@ hr {
     margin-bottom: 1vw;
     font-family: "Kurale", serif;
     font-size: 1.3vw;
+    width: 115%;
 }
 
 .ingredients h1, .directions h1 {
