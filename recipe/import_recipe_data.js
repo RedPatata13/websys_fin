@@ -107,7 +107,13 @@ class RecipeList{
     addRecipesByMark(){
         let recipes = [
             //fill recipes here
-        
+            new Recipe(
+                "name",
+                "description",
+                ["ingredients"],
+                ["shake it"],
+                "../images/adobo.jpg"
+            )
         ]
         this.mass_add(recipes);
     }
