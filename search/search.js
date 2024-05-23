@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 function main(){
     var r_list = new RecipeList();
-    carousellEffects();
+    carousellEffects(r_list);
     generateRecipes("", [], r_list);
     search_and_filter_setup(r_list);
 }
@@ -121,10 +121,17 @@ function generateRecipes(search, filters, recipe_list){
         }
     }
 }
-function carousellEffects(){
+function carousellEffects(r_list){
 
     let info_tiles = [];
     let img_tiles = [];
+    let recipes = [];
+    r_list.map.forEach(recipe =>{
+        recipes.push(recipe);
+    });
+    console.log(recipes);
+
+
     let transitions = ["translateX(-100%)", "translateX(0%)", "translateX(100%)"];
     for(let i = 0; i < 3; i++){
         info_tiles.push(document.getElementById(`info_tile_${i + 1}`));
@@ -133,31 +140,45 @@ function carousellEffects(){
 
     transitions.forEach((transition, i) => {
         info_tiles[i].style.transform = transition;
+        console.log(recipes[i].img_file_path);
+        info_tiles[i].style.backgroundImage = `url(${recipes[i].img_file_path})`;
         img_tiles[i].style.transform = `${transition} translateY(-100%)`;
     });
 
     let prev = document.getElementById('prev');
+    prev.disabled = true;
     let next = document.getElementById('next');
     let tracker = 1; //we use 1 instead of zero because we had an initial transition
 
     prev.addEventListener('click', function(){
         triggerAnimation('prev');
+        if(tracker >= 0) prev.disabled = true;
+    });
+    
+    next.addEventListener('click', function(){
+        if(tracker <= 0){
+            prev.disabled = false;
+        } else {
+            prev.disabled = true;
+        }
+        triggerAnimation('next');
+        console.log(tracker);
     });
     triggerAnimation('next'); //trigger once cuz doesnt work first action;
-    next.addEventListener('click', function(){
-        triggerAnimation('next');
-    });
     function triggerAnimation(movement) {
         // Update tracker based on movement direction
-        tracker = (movement === 'prev') ? tracker + 1 : tracker - 1;
+        console.log(movement);
+        tracker = (movement == 'prev') ? tracker + 1 : tracker - 1;
     
         info_tiles.forEach((tile, i) => {
             switch (movement) {
                 case 'next':
-                    tile.style.transform = transitions[reverseModulo(i - tracker, transitions.length)];
+                    tile.style.transform = transitions[reverseModulo(tracker - i, transitions.length)];
+                    // tile.style.backgroundImage = `url(${recipes[reverseModulo(i - tracker, recipes.length)].img_file_path})`;
                     break;
                 case 'prev':
                     tile.style.transform = transitions[reverseModulo(i + tracker, transitions.length)];
+                    // tile.style.backgroundImage = `url($]})`
                     break;
             }
         });
@@ -165,7 +186,7 @@ function carousellEffects(){
         img_tiles.forEach((tile, i) => {
             switch (movement) {
                 case 'next':
-                    tile.style.transform = `${transitions[reverseModulo(i - tracker, transitions.length)]} translateY(-100%)`;
+                    tile.style.transform = `${transitions[reverseModulo(tracker - i, transitions.length)]} translateY(-100%)`;
                     break;
                 case 'prev':
                     tile.style.transform = `${transitions[reverseModulo(i + tracker, transitions.length)]} translateY(-100%)`;
@@ -173,7 +194,13 @@ function carousellEffects(){
             }
         });
     }
-    
+    function handleTransitionNext(element, tracker){
+        switch(element.transform){
+            case 'translateX(-100%) translateY(-100%)':
+
+
+        }
+    }
     function reverseModulo(num, max) {
         return (num % max + max) % max;
     }
@@ -245,7 +272,7 @@ class RecipeList{
                 "placeholder",
                 ["placeholder"],
                 ["placeholder"],
-                "../images/adobo.jpg",
+                "../images/tinola.jpg",
                 [],
                 "../recipe/Adobo.html"
             ),
@@ -254,7 +281,7 @@ class RecipeList{
                 "placeholder",
                 ["placeholder"],
                 ["placeholder"],
-                "../images/adobo.jpg",
+                "../images/cheap.jpeg",
                 [],
                 "../recipe/Adobo.html"
             ),
