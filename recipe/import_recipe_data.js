@@ -73,9 +73,9 @@ class RecipeList{
     addItemsByRed(){
         let recipes = [
             new Recipe(
-                "Adobo", 
-                "Philippine adobo is a popular Filipino dish and cooking process in Philippine cuisine. In its base form, meat, seafood, or vegetables are first browned in oil, and then marinated and simmered in vinegar, salt and/or soy sauce, and garlic.",
-                ["Chicken", "Sugar", "Soy Sauce", "Vinegar", "Bay Leaves", "Onions", "Garlic", "Oil", "Green Onions", "Chillies", "Pepper"],
+                "Adobo", //recipe name
+                "Philippine adobo is a popular Filipino dish and cooking process in Philippine cuisine. In its base form, meat, seafood, or vegetables are first browned in oil, and then marinated and simmered in vinegar, salt and/or soy sauce, and garlic.", //recipe description
+                ["Chicken", "Sugar", "Soy Sauce", "Vinegar", "Bay Leaves", "Onions", "Garlic", "Oil", "Green Onions", "Chillies", "Pepper"], //ingredients
                 [
                     "Prep the marinade: In a large bowl, combine the soy sauce, apple cider vinegar, brown sugar, half of the garlic and the bay leaves. Add the chicken thighs and toss well. Marinate for 20 minutes to overnight.", // <---- add this comma at the end of each step
 
@@ -88,6 +88,9 @@ class RecipeList{
                     "Garnish and serve: Serve garnished with green onion and red chilies."
                 ], //this element is also an array, just expanded for easier visibility
                 "../images/adobo.jpg"
+            ),
+            new Recipe(
+                ""
             )
         ];
         
