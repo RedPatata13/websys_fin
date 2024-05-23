@@ -12,25 +12,64 @@
         <p>Eat Tasty, Eat Cheap, Eat Healthy</p>
     </div>
     <div id="recipe_carousell">
-        <div class="recipe_tiles">
-            <div class="left_tile"></div>
-            <div class="right_tile"></div>
+        <div class="carousell_arrows">
+            <button id="prev">
+                &leftarrow;
+            </button>
+            <button id="next">
+                &rightarrow;
+            </button>
         </div>
-        <div class="recipe_tiles">
-            <div class="left_tile"></div>
-            <div class="right_tile"></div>
+        <div id="tiles_container">
+            <div class="info_tiles" id="info_tiles">
+                <div class="info_tile" id="info_tile_1"></div>
+                <div class="info_tile" id="info_tile_2"></div>
+                <div class="info_tile" id="info_tile_3"></div>
+            </div>
+            <div class="img_tiles" id="img_tiles">
+                <div class="img_tile" id="img_tile_1"></div>
+                <div class="img_tile" id="img_tile_2"></div>
+                <div class="img_tile" id="img_tile_3"></div>
+            </div>
         </div>
-        <div class="recipe_tiles">
-            <div class="left_tile"></div>
-            <div class="right_tile"></div>
-        </div>
-    </div>
+            </div>
     <div id="search_box">
+        <div class="searchbar">
+            <form class="search">
+                <input type="text" name="searchbar" id="searchbar">
+            </form>
+            <button class="filter_buttons">Sautee</button>
+            <button class="filter_buttons">Grilled</button>
+            <button class="filter_buttons">Soup</button>
+            <button class="filter_buttons">Salad</button>
+            <button class="filter_buttons">Stir Fried</button>
+            <button class="filter_buttons">Baked</button>
+            <button class="filter_buttons">Steamed</button>
+            <button class="filter_buttons">Meat</button>
+            <button id="search_button">Search</button>
+        </div>
         <h1>All Recipes</h1>
         <div>Leave Blank for now</div>
-        <div id="recipe_box">
-
-        </div>
+        
     </div>
+    <div id="recipe_box">
+        <div class="recipe_col" id="recipe_col_1">
+            <!-- <div class="recipe_tile">
+                <div class="img_container">
+                    <img src="../images/adobo.jpg" class="recipe_img">
+
+                    </img>
+                </div>
+                <h3 class="rt_element">Placeholder</h3>
+                <p class="tags rt_element">Placeholder</p>
+                <div class="recipe_description rt_element">Placeholder</div>
+            </div> --> 
+        </div>
+        <div class="recipe_col" id="recipe_col_2"></div>
+        <div class="recipe_col" id="recipe_col_3"></div>
+        <div class="recipe_col" id="recipe_col_4"></div>
+        <div class="recipe_col" id="recipe_col_5"></div>
+    </div>
+    <script src="./search.js"></script>
 </body>
 </html>
