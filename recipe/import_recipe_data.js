@@ -88,9 +88,6 @@ class RecipeList{
                     "Garnish and serve: Serve garnished with green onion and red chilies."
                 ], //this element is also an array, just expanded for easier visibility
                 "../images/adobo.jpg"
-            ),
-            new Recipe(
-                ""
             )
         ];
         
@@ -124,7 +121,9 @@ class RecipeList{
 
                     "Spoon the Sloppy Joe mixture onto the hamburger buns and serve hot."
                 ],
-                "../images/sloppyJoe.jpg"
+                "../images/sloppyJoe.jpg",
+                ["Meat"],
+                "../recipe/sloppyJoe.html"
             ),
 
             new Recipe(
@@ -144,7 +143,9 @@ class RecipeList{
 
                     "Serve the beef and vegetable stir-fry over steamed rice or noodles."
                 ],
-                "../images/beefAndVegetableStirFry.jpg"
+                "../images/beefAndVegetableStirFry.jpg",
+                ["Meat", "Veggie"],
+                "../recipe/beefAndVegetableStirFry.html"
             ),
 
             new Recipe(
@@ -164,7 +165,9 @@ class RecipeList{
                     
                     "Toast the hamburger buns if desired, then pile the barbecue pulled pork onto the bottom halves of the buns. Then optionally top it with coleslaw and pickles. Cover the top halves of the buns afterwards and serve hot with preferred side dish."
                 ],
-                "../images/barbecuePulledPorkSandwiches.jpg"
+                "../images/barbecuePulledPorkSandwiches.jpg",
+                ["Meat"],
+                "../recipe/barbecuePulledPorkSandwiches.html"
             ),
 
             new Recipe(
@@ -182,7 +185,10 @@ class RecipeList{
 
                     "Remove the quesadillas from the skillet and let them cool for a minute or two. Then use a sharp knife to cut each quesadilla into wedges. And serve warm with your favorite toppings and dips."
                 ],
-                "../images/chickenQuesadillas.jpg"
+                "../images/chickenQuesadillas.jpg",
+                ["Meat"],
+                "../recipe/chickenQuesadillas.html"
+                
             ),
 
             new Recipe(
@@ -202,7 +208,10 @@ class RecipeList{
 
                     "Once baked, remove the chicken drumsticks from the oven and let it rest for a few minutes before serving. Optionally garnishing it with fresh herbs and served with lemon wedges (if using) for extra flavor."
                 ],
-                "../images/bakedChickenDrumsticks.jpg"
+                "../images/bakedChickenDrumsticks.jpg",
+                ["Meat"],
+                "../recipe/bakedChickenDrumsticks.html"
+                
             ),
 
 
@@ -227,7 +236,9 @@ class RecipeList{
 
                     "Cover the potato salad and refrigerate for at least 1-2 hours before serving to allow the flavors to meld together. And nefore serving, garnish with a sprinkle of paprika for color (if using).",
                 ],
-                "../images/potatoSalad.jpg"
+                "../images/potatoSalad.jpg",
+                ["Veggie"],
+                "../recipe/potatoSalad.html"
             ),
 
             new Recipe(
@@ -243,7 +254,9 @@ class RecipeList{
 
                     "Taste the chili and adjust the seasoning if needed, adding more salt, pepper, or spices to taste. Then serve the vegetarian chili hot, garnished with your favorite toppings such as chopped cilantro, sliced green onions, shredded cheese, sour cream, or avocado."
                 ],
-                "../images/vegetarianChili.jpg"
+                "../images/vegetarianChili.jpg",
+                ["Veggie"],
+                "../recipe/vegetarianChili.html"
             ),
             
             new Recipe(
@@ -263,7 +276,9 @@ class RecipeList{
 
                     "Remove the stuffed bell peppers from the oven and let them cool for a few minutes before serving. Garnish with chopped fresh parsley or basil, if desired, before serving"
                 ],
-                "../images/stuffedBellPeppers.jpg"
+                "../images/stuffedBellPeppers.jpg",
+                ["Veggie"],
+                "../recipe/stuffedBellPeppers.html"
             ),
 
             new Recipe(
@@ -283,7 +298,9 @@ class RecipeList{
 
                     "Season the soup with salt and black pepper to taste. If desired, squeeze fresh lemon juice over the soup for a bright, citrusy flavor. Ladle the vegetable lentil soup into bowls and garnish with chopped fresh parsley or cilantro, if desired."
                 ],
-                "../images/vegetableAndLentilSoup.jpg"
+                "../images/vegetableAndLentilSoup.jpg",
+                ["Veggie"],
+                "../recipe/vegetableAndLentilSoup.html"
             ),
 
             new Recipe(
@@ -301,7 +318,9 @@ class RecipeList{
 
                     "Serve the chickpea curry hot, garnished with chopped fresh cilantro. Serve over cooked rice or with naan bread on the side for soaking up the flavorful sauce."
                 ],
-                "../images/chickpeaCurry.jpg"
+                "../images/chickpeaCurry.jpg",
+                ["Veggie"],
+                "../recipe/chickpeaCurry.html"
             ),
 
             // EGG RECIPES
@@ -324,7 +343,9 @@ class RecipeList{
 
                     "Slide the omelette onto a plate, either flat or folded in half. Garnish with fresh herbs, if desired, and serve immediately."
                 ],
-                "../images/omelette.jpg"
+                "../images/omelette.jpg",
+                ["Egg"],
+                "../recipe/omelette.html"
             ),
 
             new Recipe(
@@ -342,7 +363,9 @@ class RecipeList{
 
                     "Ladle the egg drop soup into bowls. Garnish with sliced green onions and toasted sesame seeds, if desired."
                 ],
-                "../images/eggDropSoup.jpg"
+                "../images/eggDropSoup.jpg",
+                ["Egg"],
+                "../recipe/eggDropSoup.html"
             ),
 
             new Recipe(
@@ -362,7 +385,9 @@ class RecipeList{
 
                     "Remove the muffin tin from the oven and let the egg muffins cool for a few minutes in the pan before carefully removing them. And serve the egg muffins warm as a quick and convenient breakfast or snack. They can also be stored in an airtight container in the refrigerator for up to 3-4 days or frozen for longer storage. Reheat them gently in the microwave before serving."
                 ],
-                "../images/eggMuffin.jpg"
+                "../images/eggMuffin.jpg",
+                ["Egg"],
+                "../recipe/eggMuffin.html"
             ),
 
             new Recipe(
@@ -380,7 +405,9 @@ class RecipeList{
 
                     "Once the eggs are cooked to your liking, remove the skillet from the heat. Garnish the shakshuka with chopped fresh parsley or cilantro. Serve hot with crumbled feta cheese or goat cheese on top, if desired. Then serve the shakshuka with crusty bread or pita for dipping and scooping up the delicious sauce and eggs."
                 ],
-                "../images/shakshuka.jpg"
+                "../images/shakshuka.jpg",
+                ["Egg"],
+                "../recipe/shakshuka.html"
             ),
 
             new Recipe(
@@ -398,7 +425,254 @@ class RecipeList{
 
                     "Remove the skillet from the heat. Drizzle a little sesame oil over the fried rice for extra flavor (if desired). And garnish the egg fried rice with sliced green onions, toasted sesame seeds, and chopped fresh cilantro or parsley, if using."
                 ],
-                "../images/eggFriedRice.jpg"
+                "../images/eggFriedRice.jpg",
+                ["Egg"],
+                "../recipe/eggFriedRice.html"
+            ),
+
+            // PASTA RECIPES
+            new Recipe(
+                "Macaroni and Cheese",
+                "A classic comfort food dish made with cooked macaroni pasta and a creamy cheese sauce.",
+                ["2 cups elbow macaroni", "4 tbsp butter", "1/4 cup all-purpose flour", "2 cups milk", "2 cups shredded cheese (e.g. cheddar, mozzarella, or a mix", "salt", "black pepper", "(Optional) cooked bacon, diced ham, cooked vegetables (such as broccoli or peas), breadcrumbs for topping"],
+                [
+                    "Cook the macaroni or pasta according to the package instructions until al dente. Drain and set aside.",
+
+                    "In a large saucepan, melt the butter over medium heat. Once melted, whisk in the flour to form a smooth paste (roux). Cook the roux for 1-2 minutes, stirring constantly, until it becomes golden brown and fragrant.",
+                    
+                    "Gradually pour in the milk while whisking continuously to prevent lumps from forming. Cook the mixture, stirring constantly, until it thickens and begins to bubble.",
+
+                    "Reduce the heat to low. Stir in the shredded cheese, a handful at a time, until melted and smooth. Continue stirring until the cheese sauce is thick and creamy.",
+                    
+                    "Season the cheese sauce with salt and black pepper to taste. Adjust the seasoning as needed.",
+
+                    "Add the cooked pasta to the cheese sauce and stir until well coated and combined. If using any optional add-ins, fold them into the mac and cheese at this stage.",
+
+                    "Serve the mac and cheese hot, either as is or with a sprinkle of breadcrumbs on top for added texture and crunch."
+                ],
+                "../images/macaroniAndCheese.jpg",
+                ["Pasta"],
+                "../recipe/macaroniAndCheese.html"
+            ),
+
+            new Recipe(
+                "Spaghetti Carbonara",
+                "A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper. It is a simple yet rich and flavorful dish that comes together quickly.",
+                ["12 oz of spaghetti", "4 oz pancetta or guanciale, diced", "2 large eggs", "1 cup grated parmesan cheese", "Freshly ground black pepper", "salt, for pasta water", "2 cloves garlic, peeled and smashed (optional)", "Chopped fresh parsley, for garnish (optional)"
+                ],
+                [
+                    "Bring a large pot of salted water to a boil. Cook the spaghetti according to the package instructions until al dente. Reserve about 1 cup of pasta water before draining.",
+
+                    "While the pasta is cooking, heat a large skillet over medium heat. Add the diced pancetta (or guanciale) and cook until it becomes crispy and browned, about 5-7 minutes. If using garlic, add it to the skillet for the last 2 minutes to infuse the oil, then remove and discard the garlic.",
+
+                    "In a medium bowl, whisk together the eggs, grated Pecorino Romano cheese, and a generous amount of freshly ground black pepper until well combined.",
+
+                    "Once the pasta is cooked, drain it (reserving some pasta water) and immediately add the hot pasta to the skillet with the pancetta. Toss to combine, ensuring the pasta is well coated with the rendered fat. Then remove the skillet from the heat and quickly pour the egg and cheese mixture over the pasta, tossing continuously to create a creamy sauce. The heat from the pasta will cook the eggs without scrambling them. If the sauce is too thick, add a little reserved pasta water, a tablespoon at a time, until the desired consistency is reached.",
+
+                    "Serve the spaghetti carbonara immediately, garnished with extra grated cheese, more black pepper, and chopped fresh parsley if desired."
+                ],
+                "../images/spaghettiCarbonara.jpg",
+                ["Pasta"],
+                "../recipe/spaghettiCarbonara.html"
+            ),
+
+            new Recipe(
+                "Cajun Shrimp Pasta",
+                "A flavorful and spicy dish that combines succulent shrimp with a creamy Cajun sauce, served over pasta.",
+                ["12 oz of fettucine or preferred pasta", "1 lb large shrimp, peeled and deveined", "2 tbsp Cajun seasoning", "2 tbsp olive oil", "1 tbsp butter", "1 small onion, finely chopped", "1 red bell pepper, diced", "3 cloves garlic, minced", "1 cup heavy cream", "1 cup chicken broth", "1/2 cup grated Parmesan cheese", "salt" , "black pepper", "Chopped fresh parsley, for garnish", "Lemon wedges, for serving"
+                ],
+                [
+                    "Bring a large pot of salted water to a boil. Cook the pasta according to the package instructions until al dente. Drain and set aside.",
+
+                    "In a bowl, toss the shrimp with the Cajun seasoning until evenly coated.",
+
+                    "Heat the olive oil in a large skillet over medium-high heat. Add the shrimp and cook for 2-3 minutes on each side, until they are pink and opaque. Remove the shrimp from the skillet and set aside.",
+
+                    "In the same skillet, add the butter. Once melted, add the chopped onion and diced red bell pepper. Sauté for 4-5 minutes until the vegetables are softened. Add the minced garlic and cook for an additional 1-2 minutes, until fragrant.",
+
+                    "Reduce the heat to medium. Pour in the heavy cream and chicken broth, stirring to combine. Let the sauce simmer for 3-4 minutes until it begins to thicken.",
+
+                    "Stir in the grated Parmesan cheese until melted and the sauce is smooth. Season with salt and black pepper to taste.",
+
+                    "Add the cooked pasta and shrimp back into the skillet. Toss to coat the pasta and shrimp with the creamy sauce.",
+
+                    "Cook for another 2-3 minutes until everything is heated through and well combined.",
+
+                    "Serve the Cajun shrimp pasta immediately, garnished with chopped fresh parsley. Serve with lemon wedges on the side for a burst of freshness."
+                ],
+                "../images/cajunShrimpPasta.jpg",
+                ["Pasta"],
+                "../recipe/cajunShrimpPasta.html"
+            ),
+
+            new Recipe(
+                "Veggie Pancit Canton",
+                "A delicious and colorful Filipino stir-fried noodle dish made with a variety of vegetables and Canton noodles. It is a vegetarian version of the traditional Pancit Canton, typically includes meat or seafood.",
+                ["8 oz Canton noodles or chinese egg noodles", "2 tbsp vegetable oil", "1 medium onion, thinly sliced", "3 cloves garlic, minced", "1 cup sliced carrots", "1 cup green beans, cut into 2-inch pieces", "1 red bell pepper, thinly sliced", "1 cup cabbage, shredded", "1 cup broccoli florets", "1/4 cup soy sauce", "1 tbsp oyster sauce (optional)", "1 tsp sugar", "1/2 cup vegetable broth or water", "salt", "black pepper", "lemon wedges for serving", "Chopped green onions and cilantro for garnish"
+                ],
+                [
+                    "Cook the Canton noodles according to the package instructions until al dente. Drain and set aside. If the noodles are stuck together, you can rinse them briefly with cold water and drain well.",
+
+                    "In a small bowl, mix together the soy sauce, oyster sauce (if using), sugar, and vegetable broth or water. Set aside.",
+
+                    "Heat the vegetable oil in a large skillet or wok over medium-high heat. Add the sliced onion and minced garlic. Sauté for 2-3 minutes until fragrant and the onion is translucent.",
+
+                    "Add the sliced carrots and green beans. Stir-fry for 3-4 minutes until they start to soften.",
+
+                    "Add the red bell pepper, cabbage, and broccoli florets. Stir-fry for another 3-4 minutes until all the vegetables are tender-crisp.",
+
+                    "Add the cooked Canton noodles to the skillet with the vegetables. Pour the prepared sauce over the noodles and vegetables.",
+
+                    "Toss everything together until the noodles and vegetables are well coated with the sauce. Cook for an additional 2-3 minutes, stirring frequently, until everything is heated through.",
+
+                    "Season with salt and black pepper to taste. Adjust the seasoning if necessary.",
+
+                    "Remove from heat and transfer the Veggie Pancit Canton to a serving platter.", 
+                
+                    "Garnish with chopped green onions and cilantro. Serve with lemon wedges on the side for squeezing over the top."
+                ],
+                "../images/veggiePancitCanton.jpg",
+                ["Pasta"],
+                "../recipe/veggiePancitCanton.html"
+            ),
+            
+            new Recipe(
+                "Pasta with Lemon and Garlic Butter Sauce",
+                "A simple yet flavorful dish that combines the tanginess of lemon with the rich, savory taste of garlic and butter. It is quick to prepare and can be enjoyed as a main course or a side dish.",
+                ["12 ounces of pasta (spaghetti, linguine or fettuccine)", "1/4 cup unsaled butter", "4 cloves garlic, minced", "1/2 cup freshly squeezed lemon juice", "Zest of 1 lemon", "1/2 cup grated Parmesan cheese", "1/4 cup chopped fresh parsley", "salt", "black pepper", "Red pepper flakes (optional, for a bit of heat)", "1/2 cup pasta cooking water (reserved)"
+                ],
+                [
+                    "Bring a large pot of salted water to a boil. Cook the pasta according to the package instructions until al dente. Reserve about 1/2 cup of pasta cooking water before draining the pasta. Drain and set aside.", 
+                    
+                    "In a large skillet, melt the butter over medium heat. Add the minced garlic and cook for about 1-2 minutes until fragrant, being careful not to let it brown.",
+
+                    "Stir in the lemon juice and lemon zest. Let the mixture cook for another 1-2 minutes to allow the flavors to meld.",
+
+                    "Add the cooked pasta to the skillet with the lemon-garlic butter sauce. Toss to coat the pasta evenly with the sauce. If the pasta seems dry, gradually add the reserved pasta cooking water, a little at a time, until the desired consistency is reached.",
+
+                    "Stir in the grated Parmesan cheese until melted and well combined with the pasta. Season with salt, black pepper, and red pepper flakes (if using) to taste.",
+
+                    "Remove from heat and sprinkle with chopped fresh parsley. Toss to combine. and serve the pasta hot, with additional grated Parmesan cheese on the side if desired."
+                ],
+                "../images/pastaWithLemonAndGarlicButterSauce.jpg",
+                ["Pasta"],
+                "../recipe/pastaWithLemonAndGarlicButterSauce.html"
+            ),
+
+            // FISH RECIPES
+            new Recipe(
+                "Fish Tacos",
+                "A fresh and flavorful dish that's perfect for a light meal. Typically consists of grilled or fried fish, a tangy slaw, and a creamy sauce, all wrapped in warm tortillas.",
+                ["For the Fish:", "1 lb white fish fillets (e.g. cod, tilapia, or mahi-mahi", "2 tbsp olive", "1 tbsp lime juice", "1 tsp chili powder", "1/2 tsp ground cumin", "1/2 tsp paprika", "1/4 tsp garlic powder", "salt", "black pepper", "For the Slaw:", "2 cups shredded cabbage", "1/2 cup shredded carrots", "1/4 cup chopped fresh cilantro", "2 tbsp lime juice", "1 tbsp olive oil", "salt", "black pepper", "For the Sauce:", "1/2 cup sour cream or Greek Yogurt", "2 tbsp mayonnaise", "1 tbsp lime juice", "1-2 tsp hot sauce (optional)", "salt", "black pepper", "For the Serving:", "8 small corn or flour tortillas, warmed", "Lime Wedges", "Additional toppings (e.g. diced avocado, sliced jalapenos, or crumbled queso fresco"
+                ],
+                [
+                    "In a small bowl, mix together the olive oil, lime juice, chili powder, cumin, paprika, garlic powder, salt, and black pepper to create a marinade. And place the fish fillets in a shallow dish and pour the marinade over them, ensuring they are well coated. Let them marinate for at least 15 minutes.", 
+                    
+                    "In a large bowl, combine the shredded cabbage, shredded carrots, and chopped cilantro. Then drizzle with lime juice and olive oil, then season with salt and black pepper. Toss to combine. Set aside.",
+
+                    "In a small bowl, whisk together the sour cream (or Greek yogurt), mayonnaise, lime juice, hot sauce (if using), salt, and black pepper until smooth. Set aside.",
+
+                    "Heat a grill pan or large skillet over medium-high heat. Cook the fish for about 3-4 minutes per side, or until it is opaque and flakes easily with a fork. Cooking time will depend on the thickness of the fillets.",
+
+                    "Break the cooked fish into large chunks. Place a portion of the fish on each warmed tortilla. Top with a generous amount of slaw and drizzle with the sauce. Add any additional toppings you like.",
+
+                    "Serve the fish tacos immediately with lime wedges on the side for squeezing over the top."
+                ],
+                "../images/fishTacos.jpg",
+                ["Fish"],
+                "../recipe/fishTacos.html"
+            ),
+
+            new Recipe(
+                "Baked Lemon Garlic Tilapia",
+                "A simple and flavorful dish that's quick to prepare and perfect for a light and healthy meal.",
+                ["4 tilapia fillets", "2 tbsp olive oil", "2 cloves garlic, minced", "zest of 1 lemon", "juice of 1 lemon", "1 tsp dried thyme", "salt", "black pepper", "lemon slices for garnish", "chopped fresh parsley for garnish"
+                ],
+                [
+                    "Preheat your oven to 400 degrees Fahrenheit (200 degrees Celsius). Lightly grease a baking dish with olive oil or non-stick cooking spray.", 
+                    
+                    "Pat the tilapia fillets dry with paper towels. Place them in the prepared baking dish in a single layer.",
+
+                    "In a small bowl, whisk together the olive oil, minced garlic, lemon zest, lemon juice, dried thyme, salt, and black pepper until well combined.",
+
+                    "Pour the lemon garlic mixture over the tilapia fillets, making sure they are evenly coated on all sides.",
+
+                    "Place a lemon slice on top of each tilapia fillet for extra flavor. And bake in the preheated oven for 12-15 minutes, or until the fish is opaque and flakes easily with a fork.",
+
+                    "Remove the baked lemon garlic tilapia from the oven and garnish with chopped fresh parsley. and serve the tilapia fillets hot, with additional lemon wedges on the side for squeezing over the top, if desired."
+                ],
+                "../images/bakedLemonGarlicTilapia.jpg",
+                ["Fish"],
+                "../recipe/bakedLemonGarlicTilapia.html"
+            ),
+            
+            new Recipe(
+                "Fisherman's Stew",
+                "Also known as seafood stew or cioppino, is a hearty and flavorful dish made with a variety of seafood simmered in a rich tomato-based broth. It is a comforting and satisfying meal that is perfect for seafood lovers",
+                ["1 lb mixed seafood", "2 tbsp olive oil", "1 onion, diced", "3 cloves garlic, minced", "1 red bell pepper, diced", "1 yellow bell pepper, diced", "1 carrot, diced", "1 celery stalk, diced", "1 can (14 oz) diced tomatoes", "2 cups of seafood or fish stock", "1 cup dry white wine", "1 tsp dried thyme", "1 tsp dried oregano", "1 bay leaf", "salt", "black pepper", "chopped fresh parsley, for garnish", "crusty bread, for serving"
+                ],
+                [
+                    "If using whole shrimp, peel and devein them. Scrub the mussels and clams under cold running water to remove any grit. Clean and slice the squid into rings. Cut the firm fish into bite-sized pieces. Set aside.", 
+                    
+                    "Heat the olive oil in a large pot or Dutch oven over medium heat. Add the diced onion, minced garlic, diced bell peppers, diced carrot, and diced celery. Sauté for 5-7 minutes, or until the vegetables are softened.",
+
+                    "Stir in the diced tomatoes, seafood or fish stock, and dry white wine. Add the dried thyme, dried oregano, and bay leaf. Season with salt and black pepper to taste. Bring the mixture to a simmer.",
+
+                    "Reduce the heat to low and let the stew simmer for 15-20 minutes, allowing the flavors to meld and the vegetables to become tender.",
+
+                    "Once the stew has simmered, add the mixed seafood to the pot. Stir gently to combine.",
+
+                    "Cook the seafood in the stew for 5-7 minutes, or until the shrimp are pink and opaque, the mussels and clams have opened, and the firm fish is cooked through. Discard any mussels or clams that do not open.",
+
+                    "Remove the bay leaf from the stew. Taste and adjust the seasoning if necessary. And ladle the fisherman's stew into bowls. Garnish with chopped fresh parsley. Then serve hot with crusty bread on the side for dipping and soaking up the flavorful broth."
+                ],
+                "../images/fishermansStew.jpg",
+                ["Fish"],
+                "../recipe/fishermansStew.html"
+            ),
+
+            new Recipe(
+                "Pan-Seared Salmon",
+                "A simple yet elegant dish that highlights the natural flavors of the fish. It is quick to prepare and versatile, making it a perfect choice for a weeknight dinner or a special occasion.",
+                ["4 salmon fillets, skin-on or skinless (6 oz each)", "salt", "black pepper", "2 tbsp olive oil or unsalted butter", "lemon wedges for serving", "Optional Garnishes: chopped fresh herbs (e.g. dill, parsley, or chives), minced garlic, or lemon slices"
+                ],
+                [
+                    "Pat the salmon fillets dry with paper towels. Season both sides generously with salt and black pepper.", 
+                    
+                    "Heat a large skillet or frying pan over medium-high heat. Add the olive oil or butter and swirl to coat the bottom of the pan evenly.",
+
+                    "Once the pan is hot, carefully place the salmon fillets in the skillet, skin-side down if they have skin. Cook without moving them for about 4-5 minutes, or until the bottom is golden brown and crispy.",
+
+                    "Using a spatula, gently flip the salmon fillets over. If desired, add any optional garnishes to the pan, such as minced garlic or lemon slices. Cook for an additional 3-4 minutes, or until the salmon is cooked to your desired level of doneness. The salmon should be opaque and flake easily with a fork.",
+
+                    "Remove the pan-seared salmon from the skillet and transfer to a serving platter or individual plates. and serve hot, garnished with lemon wedges and chopped fresh herbs, if desired.",
+
+                ],
+                "../images/panSearedSalmon.jpg",
+                ["Fish"],
+                "../recipe/panSearedSalmon.html"
+            ),
+
+            new Recipe(
+                "Crispy Baked Fish Sticks",
+                "A healthy alternative to its classic fried version; the french fries!",
+                ["1 lb white fish fillet, cut into strips", "1 cup all-purpose flour", "2 eggs, beaten", "1 cup breadcrumbs (plained or seasoned)", "1/2 grated Parmesan cheese (optional)", "1 tsp garlic powder", "1 tsp paprika", "1/2 tsp salt", "1/4 tsp black pepper", "olive oil, for greasing"
+                ],
+                [
+                    "Preheat your oven to 425 degrees Fahrenheit (220 degrees Celsius). Line a baking sheet with parchment paper or aluminum foil and lightly grease it with cooking spray or olive oil.", 
+                    
+                    "Set up a breading station with three shallow dishes. In the first dish, place the all-purpose flour. In the second dish, beat the eggs. In the third dish, combine the breadcrumbs, grated Parmesan cheese (if using), garlic powder, paprika, salt, and black pepper. Mix well to combine.",
+
+                    "Dredge each fish strip in the flour, shaking off any excess. Dip it into the beaten eggs, allowing any excess to drip off. Then coat it evenly with the breadcrumb mixture, pressing gently to adhere. Place the breaded fish strip on the prepared baking sheet.",
+
+                    "Once all the fish strips are breaded and arranged on the baking sheet, lightly spray them with cooking spray or drizzle with olive oil. This will help them brown and crisp up in the oven. Then bake in the preheated oven for 12-15 minutes, or until the fish sticks are golden brown and crispy on the outside and cooked through on the inside. The internal temperature of the fish should reach 145 degrees Fahrenheit (63 degrees Celsius).",
+
+                    "Remove the crispy baked fish sticks from the oven and let them cool slightly before serving. and serve hot with your favorite dipping sauce, such as tartar sauce, ketchup, or aioli, and enjoy!",
+
+                ],
+                "../images/crispyBakedFishSticks.jpg",
+                ["Fish"],
+                "../recipe/crispyBakedFishSticks.html"
             )
         ]
         this.mass_add(recipes);
