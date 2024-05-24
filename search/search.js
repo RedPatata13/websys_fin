@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
     main();
-    
 });
 
 function main(){
@@ -366,7 +365,7 @@ class RecipeList{
                 "placeholder",
                 ["placeholder"],
                 ["placeholder"],
-                "../images/cheap.jpeg",
+                "../images/mlynar.png",
                 [],
                 "../recipe/Adobo.html"
             ),
@@ -384,7 +383,7 @@ class RecipeList{
                 "placeholder",
                 ["placeholder"],
                 ["placeholder"],
-                "../images/adobo.jpg",
+                "../images/eggs.png",
                 [],
                 "../recipe/Adobo.html"
             ),
@@ -393,7 +392,7 @@ class RecipeList{
                 "placeholder",
                 ["placeholder"],
                 ["placeholder"],
-                "../images/adobo.jpg",
+                "../images/vegs.jpg",
                 [],
                 "../recipe/Adobo.html"
             ),
