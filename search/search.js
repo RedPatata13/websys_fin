@@ -149,9 +149,10 @@ function carousellEffects(r_list){
     prev.disabled = true;
     let next = document.getElementById('next');
     let tracker = 1; //we use 1 instead of zero because we had an initial transition
+    let stack = [];
 
     prev.addEventListener('click', function(){
-        triggerAnimation('prev');
+        handleTransitionPrev();
         if(tracker >= 0) prev.disabled = true;
     });
     
@@ -161,46 +162,72 @@ function carousellEffects(r_list){
         } else {
             prev.disabled = true;
         }
-        triggerAnimation('next');
+        handleTransitionNext('next');
         console.log(tracker);
     });
-    triggerAnimation('next'); //trigger once cuz doesnt work first action;
-    function triggerAnimation(movement) {
-        // Update tracker based on movement direction
-        console.log(movement);
-        tracker = (movement == 'prev') ? tracker + 1 : tracker - 1;
+    // triggerAnimation('next'); //trigger once cuz doesnt work first action;
+    handleTransitionNext();
+    // function triggerAnimation(movement) {
+    //     // Update tracker based on movement direction
+    //     console.log(movement);
+    //     tracker = (movement == 'prev') ? tracker + 1 : tracker - 1;
     
+    //     info_tiles.forEach((tile, i) => {
+    //         switch (movement) {
+    //             case 'next':
+    //                 tile.style.transform = transitions[reverseModulo(tracker - i, transitions.length)];
+    //                 // tile.style.backgroundImage = `url(${recipes[reverseModulo(i - tracker, recipes.length)].img_file_path})`;
+    //                 break;
+    //             case 'prev':
+    //                 tile.style.transform = transitions[reverseModulo(i + tracker, transitions.length)];
+    //                 // tile.style.backgroundImage = `url($]})`
+    //                 break;
+    //         }
+    //     });
+    
+    //     img_tiles.forEach((tile, i) => {
+    //         switch (movement) {
+    //             case 'next':
+    //                 tile.style.transform = `${transitions[reverseModulo(tracker - i, transitions.length)]} translateY(-100%)`;
+    //                 break;
+    //             case 'prev':
+    //                 tile.style.transform = `${transitions[reverseModulo(i + tracker, transitions.length)]} translateY(-100%)`;
+    //                 break;
+    //         }
+    //     });
+    // }
+    function handleTransitionNext(){
+        tracker--;
+        let curr_iter = []
+        info_tiles.forEach(curr_t => {
+            curr_iter.push((curr_t.style.transform));
+        });
+
         info_tiles.forEach((tile, i) => {
-            switch (movement) {
-                case 'next':
-                    tile.style.transform = transitions[reverseModulo(tracker - i, transitions.length)];
-                    // tile.style.backgroundImage = `url(${recipes[reverseModulo(i - tracker, recipes.length)].img_file_path})`;
-                    break;
-                case 'prev':
-                    tile.style.transform = transitions[reverseModulo(i + tracker, transitions.length)];
-                    // tile.style.backgroundImage = `url($]})`
-                    break;
-            }
-        });
-    
+            let curr_t = transitions[reverseModulo(tracker - i, transitions.length)];
+            switch(curr_t){}
+            tile.style.transform = curr_t;
+        })
+        console.log(curr_iter);
         img_tiles.forEach((tile, i) => {
-            switch (movement) {
-                case 'next':
-                    tile.style.transform = `${transitions[reverseModulo(tracker - i, transitions.length)]} translateY(-100%)`;
-                    break;
-                case 'prev':
-                    tile.style.transform = `${transitions[reverseModulo(i + tracker, transitions.length)]} translateY(-100%)`;
-                    break;
-            }
+            let curr_t = transitions[reverseModulo(tracker - i, transitions.length)];
+            tile.style.transform = `${curr_t} translateY(-100%)`;
+        });
+
+        stack.push(curr_iter);
+    }
+    function handleTransitionPrev(){
+        tracker++;
+        if(stack.length <= 0) console.error('stack empty');
+
+        let curr_iter = stack.pop();
+        console.log(curr_iter);
+        curr_iter.forEach((transition, i) => {
+            info_tiles[i].style.transform = transition;
+            img_tiles[i].style.transform = `${transition} translateY(-100% )`;
         });
     }
-    function handleTransitionNext(element, tracker){
-        switch(element.transform){
-            case 'translateX(-100%) translateY(-100%)':
 
-
-        }
-    }
     function reverseModulo(num, max) {
         return (num % max + max) % max;
     }
@@ -320,7 +347,16 @@ class RecipeList{
                 "../images/adobo.jpg",
                 [],
                 "../recipe/Adobo.html"
-            )
+            ),
+            new Recipe(
+                "Placeholder 7",
+                "placeholder",
+                ["placeholder"],
+                ["placeholder"],
+                "../images/adobo.jpg",
+                [],
+                "../recipe/Adobo.html"
+            ),
         ];
         
         this.mass_add(recipes);
