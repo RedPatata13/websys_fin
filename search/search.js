@@ -41,12 +41,12 @@ function search_and_filter_setup(r_list){
         switch(state[1]){
             case false:
                 console.log("happened");
-                state[0].style.backgroundColor = 'black';
+                state[0].style.backgroundColor = '#a36d6d';
                 state[0].style.color = 'white';
                 state[1] = true;
                 break;
             case true:
-                state[0].style.backgroundColor = 'white';
+                state[0].style.backgroundColor = '#ffc806';
                 state[0].style.color = 'black';
                 state[1] = false;
                 break;
@@ -435,3 +435,6 @@ class RecipeList{
         this.mass_add(recipes);
     }
 }
+
+
+// yoe's functions
