@@ -140,91 +140,149 @@ function carousellEffects(r_list){
 
     transitions.forEach((transition, i) => {
         info_tiles[i].style.transform = transition;
-        console.log(recipes[i].img_file_path);
-        info_tiles[i].style.backgroundImage = `url(${recipes[i].img_file_path})`;
-        img_tiles[i].style.transform = `${transition} translateY(-100%)`;
-    });
+        // console.log(recipes[i].img_file_path);
+        let curr_recipe = recipes[i];
+        img_tiles[i].style.backgroundImage = `url(${recipes[i].img_file_path})`;
 
+        img_tiles[i].style.transform = transition;
+
+        info_tiles[i].innerHTML = '';
+        info_tiles[i].appendChild(generate_information(curr_recipe.tags, curr_recipe.name, curr_recipe.description, curr_recipe.url));
+    });
+    setTimeout(function(){
+        for(let i = 0; i < info_tiles.length; i++){
+        info_tiles[i].style.transition = '0.5s';
+        img_tiles[i].style.transition = '0.5s';
+    }
+    }, 100);
+    
     let prev = document.getElementById('prev');
     prev.disabled = true;
     let next = document.getElementById('next');
-    let tracker = 1; //we use 1 instead of zero because we had an initial transition
+    let tracker = 0; //we use 1 instead of zero because we had an initial transition
     let stack = [];
 
     prev.addEventListener('click', function(){
         handleTransitionPrev();
-        if(tracker >= 0) prev.disabled = true;
+        if(tracker == 0) prev.disabled = true;
     });
     
     next.addEventListener('click', function(){
-        if(tracker <= 0){
+        // console.log(tracker);
+        if(tracker >= 0){
             prev.disabled = false;
         } else {
             prev.disabled = true;
         }
-        handleTransitionNext('next');
-        console.log(tracker);
+        handleTransitionNext();
+        // console.log(tracker);
     });
     // triggerAnimation('next'); //trigger once cuz doesnt work first action;
-    handleTransitionNext();
-    // function triggerAnimation(movement) {
-    //     // Update tracker based on movement direction
-    //     console.log(movement);
-    //     tracker = (movement == 'prev') ? tracker + 1 : tracker - 1;
-    
-    //     info_tiles.forEach((tile, i) => {
-    //         switch (movement) {
-    //             case 'next':
-    //                 tile.style.transform = transitions[reverseModulo(tracker - i, transitions.length)];
-    //                 // tile.style.backgroundImage = `url(${recipes[reverseModulo(i - tracker, recipes.length)].img_file_path})`;
-    //                 break;
-    //             case 'prev':
-    //                 tile.style.transform = transitions[reverseModulo(i + tracker, transitions.length)];
-    //                 // tile.style.backgroundImage = `url($]})`
-    //                 break;
-    //         }
-    //     });
-    
-    //     img_tiles.forEach((tile, i) => {
-    //         switch (movement) {
-    //             case 'next':
-    //                 tile.style.transform = `${transitions[reverseModulo(tracker - i, transitions.length)]} translateY(-100%)`;
-    //                 break;
-    //             case 'prev':
-    //                 tile.style.transform = `${transitions[reverseModulo(i + tracker, transitions.length)]} translateY(-100%)`;
-    //                 break;
-    //         }
-    //     });
-    // }
-    function handleTransitionNext(){
-        tracker--;
-        let curr_iter = []
-        info_tiles.forEach(curr_t => {
-            curr_iter.push((curr_t.style.transform));
+    // handleTransitionNext();
+    function generate_information(tags, info_n, info_desc, url){
+        let info = document.createElement('div');
+        info.classList.add('info_container');
+
+
+        let info_tags = document.createElement('p');
+        info_tags.innerHTML = 'Tags: ';
+        info_tags.classList.add('tags');
+        tags.forEach(tag => {
+            info_tags.innerHTML += tag + ', ';
         });
 
-        info_tiles.forEach((tile, i) => {
-            let curr_t = transitions[reverseModulo(tracker - i, transitions.length)];
-            switch(curr_t){}
-            tile.style.transform = curr_t;
-        })
-        console.log(curr_iter);
+        let info_name = document.createElement('h1');
+        info_name.classList.add('info_name');
+        info_name.innerHTML = info_n;
+
+        let description = document.createElement('p');
+        description.classList.add('info_desc');
+        description.innerHTML = info_desc;
+
+        info.appendChild(info_tags);
+        info.appendChild(info_name);
+        info.appendChild(description);
+
+        info.addEventListener('click', function(){
+            window.location.href = url;
+        });
+
+        return info;
+    }
+    function handleTransitionNext(){
+        
+        let curr_iter = [];
         img_tiles.forEach((tile, i) => {
-            let curr_t = transitions[reverseModulo(tracker - i, transitions.length)];
-            tile.style.transform = `${curr_t} translateY(-100%)`;
+            // console.log(tracker + i);
+            let info = info_tiles[i].cloneNode(true);
+            curr_iter.push([tile.style.transform, info, tile.style.backgroundImage]);
         });
 
         stack.push(curr_iter);
+        console.log(curr_iter);
+
+        tracker++;
+        // console.log(tracker);
+        for(let i = 0; i < img_tiles.length; i++){
+            let transition = transitions[((tracker * 2) + i) % img_tiles.length];
+            
+            // console.log(tracker);
+            switch(transition){
+                case 'translateX(-100%)':
+                    img_tiles[i].style.zIndex = '3';
+                    info_tiles[i].style.zIndex = '3';
+                    break;
+                case 'translateX(100%)':
+                    let curr_recipe = recipes[(tracker + 2) % recipes.length];
+                    img_tiles[i].style.zIndex = '1';
+                    img_tiles[i].style.backgroundImage = `url(${recipes[(tracker + 2) % recipes.length].img_file_path})`;
+                    info_tiles[i].innerHTML = '';
+                    info_tiles[i].appendChild(generate_information(curr_recipe.tags, curr_recipe.name, curr_recipe.description, curr_recipe.url));
+                    console.log(info_tiles[i].innerHTML);
+                    info_tiles[i].style.zIndex = '1';
+                    break;
+                case 'translateX(0%)':
+                    img_tiles[i].style.zIndex = '2';
+                    info_tiles[i].style.zIndex = '2';
+                    break;
+            }
+            // console.log(tracker);
+            setTimeout(function(){
+                // console.log('Index: ' + (tracker + i));
+                
+                
+                    
+                img_tiles[i].style.transform = transition;
+                info_tiles[i].style.transform = transition;  
+            }, 500);
+            
+        }
     }
     function handleTransitionPrev(){
-        tracker++;
+        tracker--;
         if(stack.length <= 0) console.error('stack empty');
 
         let curr_iter = stack.pop();
         console.log(curr_iter);
-        curr_iter.forEach((transition, i) => {
-            info_tiles[i].style.transform = transition;
-            img_tiles[i].style.transform = `${transition} translateY(-100% )`;
+        curr_iter.forEach((state, i) => {
+            switch(state[0]){
+                case 'translateX(-100%)':
+                    info_tiles[i].style.zIndex = '1';
+                    img_tiles[i].style.zIndex = '1';
+                    break;
+                default:
+                    info_tiles[i].style.zIndex = '3';
+                    info_tiles[i].style.zIndex = '3';
+                    break;
+            }
+            setTimeout(function(){
+                // img_tiles[i].style.backgroundImage = `url(${state[1].img_file_path})`;
+                
+                info_tiles[i].style.transform = state[0];
+                img_tiles[i].style.transform = `${state[0]}`;
+                img_tiles[i].style.backgroundImage = state[2];
+            }, 500);
+            
         });
     }
 
@@ -317,7 +375,7 @@ class RecipeList{
                 "placeholder",
                 ["placeholder"],
                 ["placeholder"],
-                "../images/adobo.jpg",
+                "../images/pasta.png",
                 [],
                 "../recipe/Adobo.html"
             ),
@@ -353,7 +411,7 @@ class RecipeList{
                 "placeholder",
                 ["placeholder"],
                 ["placeholder"],
-                "../images/adobo.jpg",
+                "../images/pasta.png",
                 [],
                 "../recipe/Adobo.html"
             ),

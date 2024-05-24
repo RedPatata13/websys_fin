@@ -1,10 +1,14 @@
+export default RecipeList;
+
 class Recipe{
-    constructor(name, description, ingredients, directions, img_file_path){
+    constructor(name, description, ingredients, directions, img_file_path, tags, url){
         this.name = name;
         this.description = description;
         this.ingredients = ingredients;
         this.directions = directions;
         this.img_file_path = img_file_path;
+        this.tags = tags;
+        this.url = url;
     }
 }
 
@@ -53,8 +57,73 @@ class RecipeList{
 
                     "Garnish and serve: Serve garnished with green onion and red chilies."
                 ], //this element is also an array, just expanded for easier visibility
-                "../images/adobo.jpg"
-            )
+                "../images/adobo.jpg",
+                ['Meat', 'Sautee'],
+                "../recipe/Adobo.html"
+            ),
+            new Recipe(
+                "Placeholder 1",
+                "placeholder",
+                ["placeholder"],
+                ["placeholder"],
+                "../images/tinola.jpg",
+                [],
+                "../recipe/Adobo.html"
+            ),
+            new Recipe(
+                "Placeholder 2",
+                "placeholder",
+                ["placeholder"],
+                ["placeholder"],
+                "../images/cheap.jpeg",
+                [],
+                "../recipe/Adobo.html"
+            ),
+            new Recipe(
+                "Placeholder 3",
+                "placeholder",
+                ["placeholder"],
+                ["placeholder"],
+                "../images/pasta.png",
+                [],
+                "../recipe/Adobo.html"
+            ),
+            new Recipe(
+                "Placeholder 4",
+                "placeholder",
+                ["placeholder"],
+                ["placeholder"],
+                "../images/adobo.jpg",
+                [],
+                "../recipe/Adobo.html"
+            ),
+            new Recipe(
+                "Placeholder 5",
+                "placeholder",
+                ["placeholder"],
+                ["placeholder"],
+                "../images/adobo.jpg",
+                [],
+                "../recipe/Adobo.html"
+            ),
+            new Recipe(
+                "Placeholder 6",
+                "placeholder",
+                ["placeholder"],
+                ["placeholder"],
+                "../images/adobo.jpg",
+                [],
+                "../recipe/Adobo.html"
+            ),
+            new Recipe(
+                "Placeholder 7",
+                "placeholder",
+                ["placeholder"],
+                ["placeholder"],
+                "../images/pasta.png",
+                [],
+                "../recipe/Adobo.html"
+            ),
         ];
         
         this.mass_add(recipes);
@@ -75,17 +144,3 @@ class RecipeList{
         this.mass_add(recipes);
     }
 }
-
-class RecipeImporter{
-    constructor(){
-        this.list = [];
-    }
-    add(item){
-
-    }
-    get(){
-        return this.list;
-    }
-}
-
-export default [RecipeList, Recipe, RecipeImporter];
