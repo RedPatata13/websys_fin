@@ -133,7 +133,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    right: 0%;
+    left: 50%;
 
 }
 .carousell_arrows>button{
@@ -150,17 +150,17 @@ p{
 
 .arrows{
     width: 50%;
-    padding-top: 0.1vw;
+    padding-top: 0.1vw; 
     padding: 0.7vw 4px 0.3vw 4px;
 }
 
-#prev{
+/* #prev{
     margin-left: 51vw;
 }
 
 #next{
     margin-right: 1vw;
-}
+} */
 
 .info_container{
     display: flex;
