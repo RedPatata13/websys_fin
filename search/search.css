@@ -154,13 +154,7 @@ p{
     padding: 0.7vw 4px 0.3vw 4px;
 }
 
-#prev{
-    margin-left: 51vw;
-}
 
-#next{
-    margin-right: 1vw;
-}
 
 .info_container{
     display: flex;
@@ -180,7 +174,7 @@ p{
 }
 
 #recipe_box>.recipe_col{
-    width: 300px;
+    width: 350px;
     height: auto;
     
     margin: 20px;
@@ -189,20 +183,22 @@ p{
 .img_container{
     cursor: pointer;
     width: inherit;
+    height: 300px;
     overflow: hidden;
     position: relative;
     border: none;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
     
 }
 .recipe_img{
     width: 100%;
+    height: 400px;
     overflow-y: hidden;
     background-position: center;
     scale: 1.1;
     background-size: contain;
     transition: all 0.5s;
-    aspect-ratio: 1/1;
+    /* aspect-ratio: 1/1; */
     /* transform-origin: center; */
     
 }
@@ -215,18 +211,21 @@ p{
     flex-direction: column;
     justify-content: left;
     width: 100%;
-    height: auto;
+    height: 540px;
     overflow: hidden;
     text-decoration: none;
-    color: white;
-    background-color: rgba(0, 0, 0, 0);
+    color: var(--font-color-dark);
+    background-color: var(--font-color-light);
     margin-bottom: 20px;
 }
 
 .rt_element{
-    margin: 10px 0px 15px 0px;
+    margin: 15px;
 }
 
+.recipe_tile p{
+    margin-left: 12px;
+}
 .recipe_tile h3{
     cursor: pointer;
     font-family: var(--subtext-font-two);
@@ -234,6 +233,7 @@ p{
     transition: 0.5s;
     text-decoration: underline;
     text-decoration-color: #FFC806;
+    margin: 0px 10px 20px 10px;
 }
 
 .recipe_tile>h3:hover{
