@@ -169,7 +169,8 @@ p{
     height: 100%;
     justify-content: center;
     align-items: start;
-    padding: 50px
+    padding: 50px;
+    overflow: hidden;
 }
 
 #recipe_box{
@@ -193,6 +194,7 @@ p{
     position: relative;
     border: none;
     border-radius: 0.5rem;
+    height: 250px;
     
 }
 .recipe_img{
@@ -221,6 +223,7 @@ p{
     color: white;
     background-color: rgba(0, 0, 0, 0);
     margin-bottom: 20px;
+    max-height: 500px;
 }
 
 .rt_element{
@@ -239,8 +242,13 @@ p{
 .recipe_tile>h3:hover{
     color: var(--highlight-color);
 }
+.recipe_description{
+    min-height: 180px;
+}
 #searchbox{
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .searchbar{
     display: flex;
@@ -416,4 +424,18 @@ p{
     position: relative;
     color: white;
     margin: 12px 0 16px;
+}
+.read{
+    font-size: small;
+    color: black;
+    margin-top: 20px;
+    
+}
+
+.read:hover{
+    cursor: pointer;
+}
+.info_name{
+    text-decoration: underline;
+    text-decoration-color: var(--highlight-color);
 }

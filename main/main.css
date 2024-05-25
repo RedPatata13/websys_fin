@@ -549,12 +549,14 @@ p { font-family: "Inter", sans-serif; }
 	display: flex;
 }
 
+
 .objContent img {
 	width: 1vw;
 }
 
 .tastyImg {
 	background-image: url("../images/tasty.png");
+	width: 300px;
 }
 
 .objTxt {
@@ -584,14 +586,19 @@ p { font-family: "Inter", sans-serif; }
 
 .cheapImg {
 	background-image: url("../images/cheap.jpeg");
+	width: 300px;
 }
 
 .healthyImg {
+	width: 300px;
 	background-image: url("../images/healthy.png");
+	
 }
 
 .tastyImg, .cheapImg, .healthyImg {
-	width: 120vw;
+	width: 2000px;
+	max-width: 20vw;
+	aspect-ratio: 1/1;
     height: 16vw;
     margin-left: 50px;
     border-radius: 15px;
@@ -614,7 +621,7 @@ p { font-family: "Inter", sans-serif; }
     margin-bottom: 0.5vw;
     height: 14vw;
     width: 14vw;
-    background-color: #D9D9D9;
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 50%;
     display: inline-block;
 }
