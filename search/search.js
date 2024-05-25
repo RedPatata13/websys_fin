@@ -203,9 +203,13 @@ function carousellEffects(r_list){
         info.appendChild(info_name);
         info.appendChild(description);
 
-        info.addEventListener('click', function(){
+        let read_more = document.createElement('p');
+        read_more.innerHTML = 'read more';
+
+        read_more.addEventListener('click', function(){
             window.location.href = url;
         });
+        info.appendChild(read_more);
 
         return info;
     }

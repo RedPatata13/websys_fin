@@ -121,17 +121,7 @@ p{
     /* transition: 0.5s; */
 }
 
-#img_tile_1{
-    background-color: red;
-}
 
-#img_tile_2{
-    background-color: blue;
-}
-
-#info_tile_1{
-    background-color: aqua;
-}
 
 
 
@@ -206,12 +196,12 @@ p{
 }
 .recipe_img{
     width: 100%;
-
     overflow-y: hidden;
     background-position: center;
     scale: 1.1;
     background-size: contain;
     transition: all 0.5s;
+    aspect-ratio: 1/1;
     /* transform-origin: center; */
     
 }
