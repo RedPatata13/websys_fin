@@ -151,7 +151,7 @@ class RecipeList{
             return this.map.get(key);
         }
         else{
-            console.error("Key does not exist");
+            console.error("Key does not exist" + key);
             return "-1";
         }
     }
@@ -159,9 +159,9 @@ class RecipeList{
     addItemsByRed(){
         let recipes = [
             new Recipe(
-                "Adobo", //recipe name
-                "Adobo is a popular Filipino dish and cooking process in Philippine cuisine. In its base form, meat, seafood, or vegetables are first browned in oil, and then marinated and simmered in vinegar, salt and/or soy sauce, and garlic.", //recipe description
-                ["Chicken", "Sugar", "Soy Sauce", "Vinegar", "Bay Leaves", "Onions", "Garlic", "Oil", "Green Onions", "Chillies", "Pepper"], //ingredients
+                "Adobo", 
+                "Philippine adobo is a popular Filipino dish and cooking process in Philippine cuisine. In its base form, meat, seafood, or vegetables are first browned in oil, and then marinated and simmered in vinegar, salt and/or soy sauce, and garlic.",
+                ["Chicken", "Sugar", "Soy Sauce", "Vinegar", "Bay Leaves", "Onions", "Garlic", "Oil", "Green Onions", "Chillies", "Pepper"],
                 [
                     "Prep the marinade: In a large bowl, combine the soy sauce, apple cider vinegar, brown sugar, half of the garlic and the bay leaves. Add the chicken thighs and toss well. Marinate for 20 minutes to overnight.", // <---- add this comma at the end of each step
 
@@ -174,14 +174,29 @@ class RecipeList{
                     "Garnish and serve: Serve garnished with green onion and red chilies."
                 ], //this element is also an array, just expanded for easier visibility
                 "../images/adobo.jpg",
-                ["Meat"],
+                ['Meat', 'Sautee'],
                 "../recipe/Adobo.html"
+            ),
+            new Recipe(
+                "Chicken Arrozcaldo",
+                "Arroz caldo is a lugaw (glutinous rice dish) made with chicken and rice. It’s flavored with garlic, onions, ginger, fish sauce, and other seasonings. ",
+                ["Chicken", "Garlic", "Onion", "Ginger", "Chicken Broth", "Sticky Rice", "Salt", "Pepper"],
+                [
+                    "Cook the onion, garlic, and ginger until fragrant. ",
+                    "Add the chicken and stir in the fish sauce.",
+                    "Pour in the broth and sweet rice, then bring the mixture to a boil.",
+                    "Season and continue cooking until the chicken is fully cooked."
+                ],
+                "../images/arrozCaldo.jpg",
+                ["Meat"],
+                "../recipe/arrozCaldo.html"
+                
             )
+
         ];
         
         this.mass_add(recipes);
     }
-
     addRecipesByNoah(){
         let recipes = [
             //fill recipes here
