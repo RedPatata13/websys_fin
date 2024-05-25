@@ -129,10 +129,11 @@ p{
     position: absolute;
     top: 0%;    
     height: 100%;
-    width: 100%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    right: 0%;
 
 }
 .carousell_arrows>button{
