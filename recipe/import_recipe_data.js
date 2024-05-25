@@ -5,40 +5,126 @@ document.addEventListener('DOMContentLoaded', function(){
 function main(){
     let title = document.title;
     let recipe_name = document.getElementById('recipe-name');
+    let recipe_name_2 = document.getElementById('recipe-name-2')
     let ingredients = document.getElementById('ingredients');
     let directions = document.getElementById('directions');
     let description = document.getElementById('description'); 
     let img = document.getElementById('img');
-
+    // let img_2 = document.getElementById('img-2');
+    let landing = document.getElementById('landing');
     let list = new RecipeList();
     let recipe = list.get(title);
 
-    recipe_name.innerHTML = recipe.name;
+    let linkToSearch = document.getElementById('allrecipes');
+    linkToSearch.addEventListener('click', function(){
+        window.location.href = '../search/search.html';
+    });
+
+    let backToHome = document.querySelectorAll('.logo');
+    backToHome.forEach(logo => {
+        logo.addEventListener('click', function(){
+            window.location.href = '../main/main.html';
+        });
+    });
+
+    recipe_name.innerHTML = recipe.name.toUpperCase();
+    recipe_name_2.innerHTML = recipe.name;
     description.innerHTML = recipe.description;
 
     ingredients.innerHTML = '';
     recipe.ingredients.forEach(ingredient => {
         let listItem = document.createElement('li');
         listItem.textContent = ingredient;
+        let hr = document.createElement('hr');
+        // hr.style.width = '50%';
+        let br = document.createElement('br');
+        // hr.style.height = '10px';
+        hr.style.borderTop = '0.5px solid lightgray';
+        
+        ingredients.appendChild(br);
         ingredients.appendChild(listItem);
+        ingredients.appendChild(br.cloneNode(true));
+        ingredients.appendChild(hr);
     });
 
     directions.innerHTML = '';
     recipe.directions.forEach(direction => {
         let listItem = document.createElement('li');
+        let hr = document.createElement('hr');
+        hr.style.height = '10px';
+        hr.style.width = '30%'
+        hr.style.borderTop = '0.5px solid lightgray';
+        let br = document.createElement('br');
         listItem.textContent = direction;
+        directions.appendChild(hr);        
+        directions.appendChild(br);
         directions.appendChild(listItem);
+        directions.appendChild(br.cloneNode(true));
     });
     img.style.backgroundImage = `url(${recipe.img_file_path})`;
+    landing.style.backgroundImage = `url(${recipe.img_file_path})`;
+
+    let similar = document.getElementById('similar_recipes');
+    // let similar_recipes = [];
+    let curr_tag = recipe.tags[0];
+    let index = 0;
+    list.map.forEach(recipe => {
+        if(curr_tag == recipe.tags[0] && recipe.name != title && index < 3){
+            let similar_recipe = generateSimilarRecipes(recipe.name, recipe.description, recipe.img_file_path, recipe.url);
+
+            similar.appendChild(similar_recipe);
+            index++;
+        }
+    })
+}
+function generateSimilarRecipes(recipe_name, recipe_desc, recipe_img_url, url){
+    let similar_recipes = document.createElement('div');
+    similar_recipes.classList.add('similar_recipe');
+
+    let img_container = document.createElement('div');
+    img_container.classList.add('img_container');
+    let img_div = document.createElement('div');
+    img_div.classList.add('similar_recipe_img');
+    img_div.style.backgroundImage = `url(${recipe_img_url})`;
+    img_container.appendChild(img_div);
+    
+    let name = document.createElement('h1');
+    name.innerHTML = recipe_name;
+
+    let description = document.createElement('p');
+    description.innerHTML = recipe_desc;
+
+    let textArea = document.createElement('div');
+    textArea.classList.add('textarea');
+
+    let hr = document.createElement('hr');
+    hr.style.borderTop = '0.5s solid lightgray'
+
+    let but = document.createElement('button');
+    but.innerText = 'Read More';
+    similar_recipes.appendChild(img_container);
+    textArea.appendChild(name);
+    textArea.appendChild(hr);
+    textArea.appendChild(description);
+    // textArea.appendChild(but);
+    similar_recipes.appendChild(textArea);
+    similar_recipes.appendChild(but);
+
+    similar_recipes.addEventListener('click', function(){
+        window.location.href = url;
+    })
+    return similar_recipes;
 }
 
 class Recipe{
-    constructor(name, description, ingredients, directions, img_file_path){
+    constructor(name, description, ingredients, directions, img_file_path, tags, url){
         this.name = name;
         this.description = description;
         this.ingredients = ingredients;
         this.directions = directions;
         this.img_file_path = img_file_path;
+        this.tags = tags;
+        this.url = url;
     }
 }
 
@@ -74,7 +160,7 @@ class RecipeList{
         let recipes = [
             new Recipe(
                 "Adobo", //recipe name
-                "Philippine adobo is a popular Filipino dish and cooking process in Philippine cuisine. In its base form, meat, seafood, or vegetables are first browned in oil, and then marinated and simmered in vinegar, salt and/or soy sauce, and garlic.", //recipe description
+                "Adobo is a popular Filipino dish and cooking process in Philippine cuisine. In its base form, meat, seafood, or vegetables are first browned in oil, and then marinated and simmered in vinegar, salt and/or soy sauce, and garlic.", //recipe description
                 ["Chicken", "Sugar", "Soy Sauce", "Vinegar", "Bay Leaves", "Onions", "Garlic", "Oil", "Green Onions", "Chillies", "Pepper"], //ingredients
                 [
                     "Prep the marinade: In a large bowl, combine the soy sauce, apple cider vinegar, brown sugar, half of the garlic and the bay leaves. Add the chicken thighs and toss well. Marinate for 20 minutes to overnight.", // <---- add this comma at the end of each step
@@ -87,7 +173,9 @@ class RecipeList{
 
                     "Garnish and serve: Serve garnished with green onion and red chilies."
                 ], //this element is also an array, just expanded for easier visibility
-                "../images/adobo.jpg"
+                "../images/adobo.jpg",
+                ["Meat"],
+                "../recipe/Adobo.html"
             )
         ];
         
