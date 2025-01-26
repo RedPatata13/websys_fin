@@ -195,6 +195,7 @@ p{
     border: none;
     border-radius: 0.5rem;
     height: 250px;
+    min-height: 250px;
     
 }
 .recipe_img{
@@ -202,9 +203,10 @@ p{
     overflow-y: hidden;
     background-position: center;
     scale: 1.1;
-    background-size: contain;
+    background-size: cover;
     transition: all 0.5s;
     aspect-ratio: 1/1;
+    /* background-size: co; */
     /* transform-origin: center; */
     
 }
@@ -224,6 +226,7 @@ p{
     background-color: rgba(0, 0, 0, 0);
     margin-bottom: 20px;
     max-height: 500px;
+
 }
 
 .rt_element{
@@ -434,6 +437,9 @@ p{
 
 .read:hover{
     cursor: pointer;
+}
+.recipe_box{
+    min-height: 800px;
 }
 .info_name{
     text-decoration: underline;

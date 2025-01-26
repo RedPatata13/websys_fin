@@ -579,34 +579,34 @@ class RecipeList{
                 "../recipe/spaghettiCarbonara.html"
             ),
 
-            new Recipe(
-                "Cajun Shrimp Pasta",
-                "A flavorful and spicy dish that combines succulent shrimp with a creamy Cajun sauce, served over pasta.",
-                ["12 oz of fettucine or preferred pasta", "1 lb large shrimp, peeled and deveined", "2 tbsp Cajun seasoning", "2 tbsp olive oil", "1 tbsp butter", "1 small onion, finely chopped", "1 red bell pepper, diced", "3 cloves garlic, minced", "1 cup heavy cream", "1 cup chicken broth", "1/2 cup grated Parmesan cheese", "salt" , "black pepper", "Chopped fresh parsley, for garnish", "Lemon wedges, for serving"
-                ],
-                [
-                    "Bring a large pot of salted water to a boil. Cook the pasta according to the package instructions until al dente. Drain and set aside.",
+            // new Recipe(
+            //     "Cajun Shrimp Pasta",
+            //     "A flavorful and spicy dish that combines succulent shrimp with a creamy Cajun sauce, served over pasta.",
+            //     ["12 oz of fettucine or preferred pasta", "1 lb large shrimp, peeled and deveined", "2 tbsp Cajun seasoning", "2 tbsp olive oil", "1 tbsp butter", "1 small onion, finely chopped", "1 red bell pepper, diced", "3 cloves garlic, minced", "1 cup heavy cream", "1 cup chicken broth", "1/2 cup grated Parmesan cheese", "salt" , "black pepper", "Chopped fresh parsley, for garnish", "Lemon wedges, for serving"
+            //     ],
+            //     [
+            //         "Bring a large pot of salted water to a boil. Cook the pasta according to the package instructions until al dente. Drain and set aside.",
 
-                    "In a bowl, toss the shrimp with the Cajun seasoning until evenly coated.",
+            //         "In a bowl, toss the shrimp with the Cajun seasoning until evenly coated.",
 
-                    "Heat the olive oil in a large skillet over medium-high heat. Add the shrimp and cook for 2-3 minutes on each side, until they are pink and opaque. Remove the shrimp from the skillet and set aside.",
+            //         "Heat the olive oil in a large skillet over medium-high heat. Add the shrimp and cook for 2-3 minutes on each side, until they are pink and opaque. Remove the shrimp from the skillet and set aside.",
 
-                    "In the same skillet, add the butter. Once melted, add the chopped onion and diced red bell pepper. Sauté for 4-5 minutes until the vegetables are softened. Add the minced garlic and cook for an additional 1-2 minutes, until fragrant.",
+            //         "In the same skillet, add the butter. Once melted, add the chopped onion and diced red bell pepper. Sauté for 4-5 minutes until the vegetables are softened. Add the minced garlic and cook for an additional 1-2 minutes, until fragrant.",
 
-                    "Reduce the heat to medium. Pour in the heavy cream and chicken broth, stirring to combine. Let the sauce simmer for 3-4 minutes until it begins to thicken.",
+            //         "Reduce the heat to medium. Pour in the heavy cream and chicken broth, stirring to combine. Let the sauce simmer for 3-4 minutes until it begins to thicken.",
 
-                    "Stir in the grated Parmesan cheese until melted and the sauce is smooth. Season with salt and black pepper to taste.",
+            //         "Stir in the grated Parmesan cheese until melted and the sauce is smooth. Season with salt and black pepper to taste.",
 
-                    "Add the cooked pasta and shrimp back into the skillet. Toss to coat the pasta and shrimp with the creamy sauce.",
+            //         "Add the cooked pasta and shrimp back into the skillet. Toss to coat the pasta and shrimp with the creamy sauce.",
 
-                    "Cook for another 2-3 minutes until everything is heated through and well combined.",
+            //         "Cook for another 2-3 minutes until everything is heated through and well combined.",
 
-                    "Serve the Cajun shrimp pasta immediately, garnished with chopped fresh parsley. Serve with lemon wedges on the side for a burst of freshness."
-                ],
-                "../images/cajunShrimpPasta.jpg",
-                ["Pasta"],
-                "../recipe/cajunShrimpPasta.html"
-            ),
+            //         "Serve the Cajun shrimp pasta immediately, garnished with chopped fresh parsley. Serve with lemon wedges on the side for a burst of freshness."
+            //     ],
+            //     "../images/cajunShrimpPasta.jpg",
+            //     ["Pasta"],
+            //     "../recipe/cajunShrimpPasta.html"
+            // ),
 
             new Recipe(
                 "Veggie Pancit Canton",
@@ -639,28 +639,28 @@ class RecipeList{
                 "../recipe/veggiePancitCanton.html"
             ),
             
-            new Recipe(
-                "Pasta with Lemon and Garlic Butter Sauce",
-                "A simple yet flavorful dish that combines the tanginess of lemon with the rich, savory taste of garlic and butter. It is quick to prepare and can be enjoyed as a main course or a side dish.",
-                ["12 ounces of pasta (spaghetti, linguine or fettuccine)", "1/4 cup unsaled butter", "4 cloves garlic, minced", "1/2 cup freshly squeezed lemon juice", "Zest of 1 lemon", "1/2 cup grated Parmesan cheese", "1/4 cup chopped fresh parsley", "salt", "black pepper", "Red pepper flakes (optional, for a bit of heat)", "1/2 cup pasta cooking water (reserved)"
-                ],
-                [
-                    "Bring a large pot of salted water to a boil. Cook the pasta according to the package instructions until al dente. Reserve about 1/2 cup of pasta cooking water before draining the pasta. Drain and set aside.", 
+            // new Recipe(
+            //     "Pasta with Lemon and Garlic Butter Sauce",
+            //     "A simple yet flavorful dish that combines the tanginess of lemon with the rich, savory taste of garlic and butter. It is quick to prepare and can be enjoyed as a main course or a side dish.",
+            //     ["12 ounces of pasta (spaghetti, linguine or fettuccine)", "1/4 cup unsaled butter", "4 cloves garlic, minced", "1/2 cup freshly squeezed lemon juice", "Zest of 1 lemon", "1/2 cup grated Parmesan cheese", "1/4 cup chopped fresh parsley", "salt", "black pepper", "Red pepper flakes (optional, for a bit of heat)", "1/2 cup pasta cooking water (reserved)"
+            //     ],
+            //     [
+            //         "Bring a large pot of salted water to a boil. Cook the pasta according to the package instructions until al dente. Reserve about 1/2 cup of pasta cooking water before draining the pasta. Drain and set aside.", 
                     
-                    "In a large skillet, melt the butter over medium heat. Add the minced garlic and cook for about 1-2 minutes until fragrant, being careful not to let it brown.",
+            //         "In a large skillet, melt the butter over medium heat. Add the minced garlic and cook for about 1-2 minutes until fragrant, being careful not to let it brown.",
 
-                    "Stir in the lemon juice and lemon zest. Let the mixture cook for another 1-2 minutes to allow the flavors to meld.",
+            //         "Stir in the lemon juice and lemon zest. Let the mixture cook for another 1-2 minutes to allow the flavors to meld.",
 
-                    "Add the cooked pasta to the skillet with the lemon-garlic butter sauce. Toss to coat the pasta evenly with the sauce. If the pasta seems dry, gradually add the reserved pasta cooking water, a little at a time, until the desired consistency is reached.",
+            //         "Add the cooked pasta to the skillet with the lemon-garlic butter sauce. Toss to coat the pasta evenly with the sauce. If the pasta seems dry, gradually add the reserved pasta cooking water, a little at a time, until the desired consistency is reached.",
 
-                    "Stir in the grated Parmesan cheese until melted and well combined with the pasta. Season with salt, black pepper, and red pepper flakes (if using) to taste.",
+            //         "Stir in the grated Parmesan cheese until melted and well combined with the pasta. Season with salt, black pepper, and red pepper flakes (if using) to taste.",
 
-                    "Remove from heat and sprinkle with chopped fresh parsley. Toss to combine. and serve the pasta hot, with additional grated Parmesan cheese on the side if desired."
-                ],
-                "../images/pastaWithLemonAndGarlicButterSauce.jpg",
-                ["Pasta"],
-                "../recipe/pastaWithLemonAndGarlicButterSauce.html"
-            ),
+            //         "Remove from heat and sprinkle with chopped fresh parsley. Toss to combine. and serve the pasta hot, with additional grated Parmesan cheese on the side if desired."
+            //     ],
+            //     "../images/pastaWithLemonAndGarlicButterSauce.jpg",
+            //     ["Pasta"],
+            //     "../recipe/pastaWithLemonAndGarlicButterSauce.html"
+            // ),
 
             // FISH RECIPES
             new Recipe(
@@ -734,27 +734,27 @@ class RecipeList{
                 "../recipe/fishermansStew.html"
             ),
 
-            new Recipe(
-                "Pan-Seared Salmon",
-                "A simple yet elegant dish that highlights the natural flavors of the fish. It is quick to prepare and versatile, making it a perfect choice for a weeknight dinner or a special occasion.",
-                ["4 salmon fillets, skin-on or skinless (6 oz each)", "salt", "black pepper", "2 tbsp olive oil or unsalted butter", "lemon wedges for serving", "Optional Garnishes: chopped fresh herbs (e.g. dill, parsley, or chives), minced garlic, or lemon slices"
-                ],
-                [
-                    "Pat the salmon fillets dry with paper towels. Season both sides generously with salt and black pepper.", 
+            // new Recipe(
+            //     "Pan-Seared Salmon",
+            //     "A simple yet elegant dish that highlights the natural flavors of the fish. It is quick to prepare and versatile, making it a perfect choice for a weeknight dinner or a special occasion.",
+            //     ["4 salmon fillets, skin-on or skinless (6 oz each)", "salt", "black pepper", "2 tbsp olive oil or unsalted butter", "lemon wedges for serving", "Optional Garnishes: chopped fresh herbs (e.g. dill, parsley, or chives), minced garlic, or lemon slices"
+            //     ],
+            //     [
+            //         "Pat the salmon fillets dry with paper towels. Season both sides generously with salt and black pepper.", 
                     
-                    "Heat a large skillet or frying pan over medium-high heat. Add the olive oil or butter and swirl to coat the bottom of the pan evenly.",
+            //         "Heat a large skillet or frying pan over medium-high heat. Add the olive oil or butter and swirl to coat the bottom of the pan evenly.",
 
-                    "Once the pan is hot, carefully place the salmon fillets in the skillet, skin-side down if they have skin. Cook without moving them for about 4-5 minutes, or until the bottom is golden brown and crispy.",
+            //         "Once the pan is hot, carefully place the salmon fillets in the skillet, skin-side down if they have skin. Cook without moving them for about 4-5 minutes, or until the bottom is golden brown and crispy.",
 
-                    "Using a spatula, gently flip the salmon fillets over. If desired, add any optional garnishes to the pan, such as minced garlic or lemon slices. Cook for an additional 3-4 minutes, or until the salmon is cooked to your desired level of doneness. The salmon should be opaque and flake easily with a fork.",
+            //         "Using a spatula, gently flip the salmon fillets over. If desired, add any optional garnishes to the pan, such as minced garlic or lemon slices. Cook for an additional 3-4 minutes, or until the salmon is cooked to your desired level of doneness. The salmon should be opaque and flake easily with a fork.",
 
-                    "Remove the pan-seared salmon from the skillet and transfer to a serving platter or individual plates. and serve hot, garnished with lemon wedges and chopped fresh herbs, if desired.",
+            //         "Remove the pan-seared salmon from the skillet and transfer to a serving platter or individual plates. and serve hot, garnished with lemon wedges and chopped fresh herbs, if desired.",
 
-                ],
-                "../images/panSearedSalmon.jpg",
-                ["Fish"],
-                "../recipe/panSearedSalmon.html"
-            ),
+            //     ],
+            //     "../images/panSearedSalmon.jpg",
+            //     ["Fish"],
+            //     "../recipe/panSearedSalmon.html"
+            // ),
 
             new Recipe(
                 "Crispy Baked Fish Sticks",

@@ -55,7 +55,7 @@ function search_and_filter_setup(r_list){
 function generateRecipes(search, filters, recipe_list){
 
     let flexMatrix = [];
-    for(let i = 1; i <= 5; i++){
+    for(let i = 1; i <= 4; i++){
         flexMatrix.push(document.getElementById(`recipe_col_${i}`));
     }
 
@@ -63,6 +63,7 @@ function generateRecipes(search, filters, recipe_list){
         col.innerHTML = '';
     })
     let i = 0;
+    let len = 0;
     recipe_list.map.forEach((recipe, key) => {
         if(key.toLowerCase().includes(search.toLowerCase())){
             if(isSubSet(filters, recipe.tags)){
@@ -70,11 +71,23 @@ function generateRecipes(search, filters, recipe_list){
                 let recipe_tile = generate_recipe_tile(recipe.img_file_path, recipe.name, recipe.tags, recipe.description, recipe.url);
                 flexMatrix[i % flexMatrix.length].appendChild(recipe_tile);
                 i++;
+                // len++;
             }
+            len++;
         } else {
             flexMatrix[i % flexMatrix.length].innerHTML = '';
+            len++;
         }
+
+        
+        
     });
+    console.log(i);
+    let results = document.getElementById('r');
+    console.log(len);
+    results.innerHTML = (len == i)? "All Recipes" : `${i} Recipes Found`;
+    console.log(results.innerText);
+
     function isSubSet(sub_arr, main_arr){
         return sub_arr.every(element => main_arr.includes(element));
     }
@@ -129,6 +142,16 @@ function carousellEffects(r_list){
         recipes.push(recipe);
     });
     console.log(recipes);
+    // recipes = recipes.reverse();
+    // recipes = shuffleArray(recipes);
+    function shuffleArray(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [arr[i], arr[j]] = [arr[j], arr[i]]; 
+        }
+        return arr;
+    }
+    // console.log(recipes);
 
 
     let transitions = ["translateX(-100%)", "translateX(0%)", "translateX(100%)"];
@@ -160,17 +183,25 @@ function carousellEffects(r_list){
     let next = document.getElementById('next');
     let tracker = 0; //we use 1 instead of zero because we had an initial transition
     let stack = [];
-
+    prev.style.transition = 'ease-in-out 0.5s';
+    prev.style.backgroundColor = 'rgba(255, 255, 255, 0)';
     prev.addEventListener('click', function(){
         handleTransitionPrev();
-        if(tracker == 0) prev.disabled = true;
+        
+    
+        if(tracker == 0){
+            prev.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+            prev.disabled = true;
+        };
     });
     
     next.addEventListener('click', function(){
         // console.log(tracker);
         if(tracker >= 0){
+            prev.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
             prev.disabled = false;
         } else {
+            prev.style.backgroundColor = 'rgba(255,255,255,0)';
             prev.disabled = true;
         }
         handleTransitionNext();
@@ -282,7 +313,9 @@ function carousellEffects(r_list){
             setTimeout(function(){
                 // img_tiles[i].style.backgroundImage = `url(${state[1].img_file_path})`;
                 
+                info_tiles[i].innerHTML = state[1].innerHTML;
                 info_tiles[i].style.transform = state[0];
+
                 img_tiles[i].style.transform = `${state[0]}`;
                 img_tiles[i].style.backgroundImage = state[2];
             }, 500);
